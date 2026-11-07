@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
-    <!-- Ad & Monetization Scripts (Preserved) -->
+    <!-- Ad & Monetization Scripts -->
     <script async="async" data-cfasync="false" src="https://bauval.org/21/965b8220bbd32a79b8b621fd7da3fcd7"></script>
     <div id="container-965b8220bbd32a79b8b621fd7da3fcd7"></div>
     <script>(function(s){s.dataset.zone='12174784',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
     <meta name="monetag" content="dbd4608b1dcb969fe956b0b165086815">
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AppDockHub — Premium Digital Systems, Tools & Automation</title>
-    
+    <title>AppDockHub — Katalog Resmi Software Otomatisasi, AI Drama Studio & Digital Ecosystem</title>
+    <meta name="description" content="Katalog resmi AppDockHub: Jualin Aja Drama Studio, Reddit Manager Pro, Facebook Account Manager Pro, TikTok Multi-Screen Pro, LinkedIn Manager Pro, Pinterest Manager Pro, X Manager Pro, & Cyber Orbit.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -28,11 +29,13 @@
                     colors: {
                         brand: {
                             50: '#eef2ff',
+                            400: '#818cf8',
                             500: '#6366f1',
                             600: '#4f46e5',
                             700: '#4338ca',
                             accent: '#06b6d4',
-                            emerald: '#10b981'
+                            emerald: '#10b981',
+                            amber: '#f59e0b'
                         }
                     }
                 }
@@ -40,546 +43,788 @@
         }
     </script>
     <style>
-        .glow-effect {
-            background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.22), transparent 70%);
+        body {
+            background-color: #060913;
+            background-image:
+                radial-gradient(at 15% 10%, rgba(99, 102, 241, 0.18) 0px, transparent 45%),
+                radial-gradient(at 85% 5%, rgba(6, 182, 212, 0.16) 0px, transparent 45%),
+                radial-gradient(at 50% 45%, rgba(16, 185, 129, 0.08) 0px, transparent 55%);
+        }
+        .card-glow {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .card-glow:hover {
-            box-shadow: 0 0 30px -5px rgba(99, 102, 241, 0.35);
+            transform: translateY(-6px);
+            box-shadow: 0 24px 48px -12px rgba(6, 182, 212, 0.22), 0 0 25px -5px rgba(99, 102, 241, 0.25);
+        }
+        .shine-badge {
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0) 100%);
+            background-size: 200% 100%;
+            animation: shine 3.5s infinite;
+        }
+        @keyframes shine {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
         }
     </style>
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "AppDockHub — Premium Digital Systems & Software Automation",
-      "image": "https://raw.githubusercontent.com/ametnurs/appdockhub/main/assets/thumbnails/index_vibrant.png",
-      "description": "Smart software and automation systems for online businesses, creators, and marketers.",
-      "brand": {
-        "@type": "Brand",
-        "name": "AppDockHub"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://appdockhub.com",
-        "priceCurrency": "IDR",
-        "price": "99000",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "bestRating": "5",
-        "ratingCount": "320",
-        "reviewCount": "320"
-      }
-    }
-    </script>
 </head>
-<body class="bg-[#090d16] text-slate-100 font-sans selection:bg-brand-500 selection:text-white antialiased min-h-screen flex flex-col justify-between">
+<body class="text-slate-100 font-sans selection:bg-brand-500 selection:text-white antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- TOP PROMO & REFERRAL BANNER -->
+    <div class="bg-gradient-to-r from-indigo-950 via-slate-900 to-emerald-950 border-b border-slate-800/80 py-2.5 px-4 text-center text-xs font-semibold text-slate-200">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 font-bold">
+                🔥 PROMO SPESIAL 2026
+            </span>
+            <span>Sekali Bayar Aktif Permanen • Bonus Studio AI Gratis (Text-to-Video & Generate Drama) di Bot Telegram!</span>
+            <span id="refBadgeTop" class="hidden inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-bold">
+                🤝 Partner Referral Aktif: <span id="refCodeDisplay">direct</span>
+            </span>
+        </div>
+    </div>
 
     <!-- NAVBAR -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#090d16]/85 border-b border-slate-800/80">
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#060913]/85 border-b border-slate-800/80">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3">
-                <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-500 to-brand-accent flex items-center justify-center shadow-lg shadow-brand-500/20 font-black text-xl text-white">
+            <a href="index.html" data-keep-ref="true" class="flex items-center gap-3 group">
+                <div class="h-11 w-11 rounded-2xl bg-gradient-to-tr from-brand-600 via-indigo-500 to-brand-accent flex items-center justify-center shadow-lg shadow-brand-500/25 font-black text-xl text-white group-hover:scale-105 transition">
                     ⚡
                 </div>
-                <span class="text-xl font-bold tracking-tight text-white">AppDock<span class="text-brand-accent">Hub</span></span>
+                <div>
+                    <span class="text-xl font-black tracking-tight text-white">AppDock<span class="text-brand-accent">Hub</span></span>
+                    <span class="block text-[10px] font-bold uppercase tracking-widest text-slate-400">Official Digital Ecosystem</span>
+                </div>
             </a>
 
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-                <a href="#products" class="hover:text-brand-accent transition" data-i18n="nav_products">Katalog Software</a>
-                <a href="#affiliate" class="hover:text-brand-accent transition" data-i18n="nav_affiliate">Program Afiliasi 30%</a>
-                <a href="#features" class="hover:text-brand-accent transition" data-i18n="nav_why">Keunggulan</a>
-                <a href="#faq" class="hover:text-brand-accent transition" data-i18n="nav_faq">FAQ</a>
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-300">
+                <a href="#katalog" class="hover:text-brand-accent transition">📦 Katalog 8 Produk</a>
+                <a href="#ai-gratis" class="hover:text-amber-400 transition">🍿 Studio AI & Drama Gratis</a>
+                <a href="#afiliasi" class="hover:text-emerald-400 transition">💰 Afiliasi Komisi 30% + 5%</a>
+                <a href="#keunggulan" class="hover:text-brand-accent transition">🛡️ Keunggulan</a>
+                <a href="#faq" class="hover:text-brand-accent transition">❓ FAQ</a>
             </nav>
 
-            <!-- Language Switcher & CTA -->
             <div class="flex items-center gap-3">
-                <!-- Dual Language Switcher Button -->
-                <div class="bg-slate-900 border border-slate-700/80 rounded-xl p-1 flex items-center text-xs font-bold">
-                    <button id="lang-id" onclick="setLanguage('id')" class="px-2.5 py-1.5 rounded-lg transition bg-brand-600 text-white shadow">
-                        🇮🇩 ID
-                    </button>
-                    <button id="lang-en" onclick="setLanguage('en')" class="px-2.5 py-1.5 rounded-lg transition text-slate-400 hover:text-white">
-                        🇬🇧 EN
-                    </button>
-                </div>
-
-                <a href="#products" class="hidden sm:inline-flex px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white text-sm font-semibold shadow-lg shadow-brand-500/25 transition transform hover:-translate-y-0.5" data-i18n="nav_cta">
-                    Lihat Produk
+                <a id="navBotBtn" href="https://t.me/AppDockHub_Bot?start=ref_direct" target="_blank" class="px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-cyan-600 hover:from-brand-500 hover:to-cyan-500 text-white text-xs sm:text-sm font-extrabold shadow-lg shadow-brand-500/25 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                    <span>🤖</span> <span>Buka Bot Telegram</span>
                 </a>
             </div>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="relative overflow-hidden pt-20 pb-24 glow-effect">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-500/30 bg-brand-500/10 text-xs font-semibold text-brand-300 mb-8 backdrop-blur-md">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 
-                <span data-i18n="hero_badge">Software Otomatisasi & Digital Tools Siap Pakai</span>
+    <section class="relative overflow-hidden pt-16 pb-20 md:pt-24 md:pb-28">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-xs font-bold text-cyan-300 mb-7 backdrop-blur-md">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                <span>PUSAT SOFTWARE OTOMATISASI, DRAMA STUDIO & AI MARKETING #1 INDONESIA</span>
             </div>
 
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.18] mb-6">
-                <span data-i18n="hero_title_1">Tingkatkan Omset & Bisnis.</span> <br>
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-brand-accent to-emerald-400" data-i18n="hero_title_2">
-                    Bekerja 10x Lebih Cepat.
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.12] mb-6">
+                Otomatiskan Trafik, Konten Viral & <br class="hidden sm:inline">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-cyan-300 to-emerald-400">
+                    Ledakkan Omzet Digital 10x Lipat!
                 </span>
             </h1>
 
-            <p class="max-w-2xl mx-auto text-base md:text-lg text-slate-300 font-normal leading-relaxed mb-10" data-i18n="hero_desc">
-                Solusi software modern, bot downloader streaming, dan sistem otomatisasi penjualan toko online. Buka langsung di browser laptop, PC, HP Android maupun iPhone tanpa setup rumit.
+            <p class="max-w-3xl mx-auto text-base md:text-lg text-slate-300 font-normal leading-relaxed mb-10">
+                Pilih senjata otomatisasi terbaik untuk bisnis Anda: mulai dari <strong class="text-amber-300">Jualin Aja (Full Drama Studio & Auto-Edit Anti Hak Cipta)</strong>, <strong class="text-orange-400">Reddit Manager Pro</strong>, <strong class="text-blue-400">Facebook Pro</strong>, <strong class="text-cyan-400">TikTok Multi-Screen</strong>, <strong class="text-sky-400">LinkedIn B2B</strong>, <strong class="text-rose-400">Pinterest Traffic</strong>, hingga <strong class="text-indigo-400">X (Twitter) Auto-Viral</strong>. Klik produk di bawah untuk melihat halaman penawaran spektakuler!
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#products" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 via-indigo-600 to-brand-accent hover:opacity-95 text-white font-bold shadow-xl shadow-brand-600/30 transition transform hover:-translate-y-0.5 text-base flex items-center justify-center gap-2">
-                    <span data-i18n="hero_btn_explore">Pilih Software Unggulan</span> →
+                <a href="#katalog" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 hover:opacity-95 text-slate-950 font-black shadow-2xl shadow-orange-500/30 transition transform hover:-translate-y-0.5 text-base flex items-center justify-center gap-2">
+                    <span>🔥 Jelajahi Katalog Produk Sekarang</span> →
                 </a>
-                <a href="https://t.me/AppDockHub_Bot" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl border border-slate-700 bg-slate-900/80 hover:bg-slate-800 text-slate-300 font-semibold transition text-base flex items-center justify-center gap-2">
-                    <span>💬</span> <span data-i18n="hero_btn_bot">Aktivasi di Telegram</span>
+                <a id="heroBotBtn" href="https://t.me/AppDockHub_Bot?start=ref_direct" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-2xl border border-slate-700 bg-slate-900/90 hover:bg-slate-800 text-white font-bold transition text-base flex items-center justify-center gap-2">
+                    <span>🎁 Coba Fitur AI & Drama Gratis di Bot</span>
                 </a>
             </div>
 
-            <!-- Trust Stats -->
+            <!-- Trust Metrics -->
             <div class="mt-16 pt-10 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="p-3">
-                    <div class="text-3xl font-extrabold text-white">100%</div>
-                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider" data-i18n="stat_browser">Bisa di HP & PC</div>
+                <div class="p-4 rounded-2xl bg-slate-900/50 border border-slate-800/80">
+                    <div class="text-3xl font-black text-white">8 Produk</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Ekosistem Siap Pakai</div>
                 </div>
-                <div class="p-3">
-                    <div class="text-3xl font-extrabold text-brand-accent">Instan</div>
-                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider" data-i18n="stat_delivery">Aktivasi 1 Menit</div>
+                <div class="p-4 rounded-2xl bg-slate-900/50 border border-slate-800/80">
+                    <div class="text-3xl font-black text-amber-400">1 Menit</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Aktivasi QRIS Instan</div>
                 </div>
-                <div class="p-3">
-                    <div class="text-3xl font-extrabold text-emerald-400">30%</div>
-                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider" data-i18n="stat_commission">Komisi Afiliasi</div>
+                <div class="p-4 rounded-2xl bg-slate-900/50 border border-slate-800/80">
+                    <div class="text-3xl font-black text-emerald-400">30% + 5%</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Komisi Afiliasi 2-Tier</div>
                 </div>
-                <div class="p-3">
-                    <div class="text-3xl font-extrabold text-indigo-400">4.9 ★</div>
-                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider" data-i18n="stat_rating">Rating Pengguna</div>
+                <div class="p-4 rounded-2xl bg-slate-900/50 border border-slate-800/80">
+                    <div class="text-3xl font-black text-cyan-400">4.9 / 5 ★</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Ribuan Kreator & Pebisnis</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PRODUCTS SECTION -->
-    <section id="products" class="py-24 bg-[#0d1322]/50 border-y border-slate-800/60">
+    <!-- KATALOG LENGKAP SEMUA PRODUK -->
+    <section id="katalog" class="py-20 bg-[#090f1e]/90 border-y border-slate-800/80">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
-                <div>
-                    <h2 class="text-xs uppercase tracking-widest font-bold text-brand-accent mb-3" data-i18n="products_subtitle">Katalog Resmi</h2>
-                    <p class="text-3xl md:text-4xl font-extrabold text-white tracking-tight" data-i18n="products_title">Software & Digital Systems</p>
-                </div>
-                <p class="text-slate-400 max-w-md mt-4 md:mt-0 text-sm leading-relaxed" data-i18n="products_desc">
-                    Semua produk terintegrasi dengan sistem lisensi resmi dan dapat diakses langsung melalui browser Anda.
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-3.5 py-1.5 rounded-full bg-brand-500/15 border border-brand-500/30 text-brand-400 text-xs font-extrabold uppercase tracking-widest">
+                    📦 OFFICIAL PRODUCT CATALOG
+                </span>
+                <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight mt-4 mb-4">
+                    Pilih Produk Unggulan AppDockHub
+                </h2>
+                <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+                    Klik pada kartu produk mana saja untuk membuka <strong>Halaman Penjualan Resmi</strong> lengkap dengan demo fitur, hitungan potensi penghasilan, dan tombol pemesanan langsung ke Bot Telegram.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                
-                <!-- PRODUCT 1: LIVETOK PRO -->
-                <div class="group relative rounded-2xl bg-slate-900/80 border border-slate-800 p-8 flex flex-col justify-between card-glow transition duration-300 hover:border-brand-accent/50 shadow-xl">
-                    <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-[11px] font-extrabold text-white uppercase tracking-wider shadow-lg">
-                        🔥 Popular Stream Tool
+            <!-- FEATURED #1: JUALIN AJA (FULL WIDTH HERO CARD) -->
+            <div class="mb-12">
+                <div onclick="goToProduct('jualinaja.html')" class="cursor-pointer group relative rounded-3xl bg-gradient-to-br from-amber-950/40 via-slate-900/95 to-emerald-950/40 border-2 border-amber-500/50 p-8 md:p-10 card-glow shadow-2xl">
+                    <div class="absolute -top-4 left-6 sm:left-10 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 text-xs font-black text-slate-950 uppercase tracking-wider shadow-lg">
+                        👑 BEST SELLER #1 • ALL-IN-ONE DRAMA STUDIO & AI AUTOMATION
                     </div>
-                    <div>
-                        <div class="flex justify-between items-center mb-6">
-                            <span class="px-3 py-1 text-xs font-bold rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                                Video & Live Streaming
-                            </span>
-                            <div class="text-right">
-                                <span class="text-2xl md:text-3xl font-black text-white">Rp 99.000</span>
-                                <span class="text-xs text-slate-400 block font-medium">/ bulan</span>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mt-2">
+                        <div class="lg:col-span-8">
+                            <div class="flex flex-wrap items-center gap-2.5 mb-4">
+                                <span class="px-3 py-1 text-xs font-extrabold rounded-lg bg-amber-500/15 text-amber-300 border border-amber-500/30">
+                                    🍿 Unlock Full Episode Drama (1–Tamat)
+                                </span>
+                                <span class="px-3 py-1 text-xs font-extrabold rounded-lg bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                                    🛡️ Anti-Fingerprint FFmpeg Lolos Monetisasi
+                                </span>
+                                <span class="px-3 py-1 text-xs font-extrabold rounded-lg bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
+                                    🤖 AI StoryFlow & Affiliate Video Studio
+                                </span>
+                            </div>
+
+                            <h3 class="text-3xl md:text-4xl font-black text-white group-hover:text-amber-400 transition mb-3">
+                                Jualin Aja — Full Drama Studio & E-Commerce Suite
+                            </h3>
+                            <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6">
+                                Senjata rahasia para pemilik channel YouTube, TikTok, Reels & FB Pro beromzet <strong>Rp 18 Juta – Rp 85 Juta/bulan</strong>! Download ribuan judul Drama Pendek (DramaBox, Melolo, FlickReels, NetShort) Full Episode 1 s/d Tamat, gabungkan otomatis jadi 1 video marathon (Batch Merge), dan edit otomatis (Bingkai Cinema HD, Mirror Flip, Watermark Logo, Hapus Metadata) agar <strong>100% bersih siap upload & lolos hak cipta</strong>!
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-200 mb-6">
+                                <div class="flex items-center gap-2 bg-slate-950/70 p-3 rounded-xl border border-slate-800">
+                                    <span class="text-amber-400 font-black text-base">✓</span>
+                                    <span><strong>Unlock Semua Episode (1–Tamat)</strong> + Batch Merge Film Utuh</span>
+                                </div>
+                                <div class="flex items-center gap-2 bg-slate-950/70 p-3 rounded-xl border border-slate-800">
+                                    <span class="text-amber-400 font-black text-base">✓</span>
+                                    <span><strong>Auto-Edit Sekali Klik:</strong> Frame HD, Mirror, Logo, Intro & Teks</span>
+                                </div>
+                                <div class="flex items-center gap-2 bg-slate-950/70 p-3 rounded-xl border border-slate-800">
+                                    <span class="text-amber-400 font-black text-base">✓</span>
+                                    <span><strong>AI StoryFlow & Affiliate Studio:</strong> Bikin Video Jualan Otomatis</span>
+                                </div>
+                                <div class="flex items-center gap-2 bg-slate-950/70 p-3 rounded-xl border border-slate-800">
+                                    <span class="text-amber-400 font-black text-base">✓</span>
+                                    <span><strong>Akses Multi-Platform:</strong> Buka di HP Android, iPhone, Laptop & PC</span>
+                                </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-brand-accent transition">
-                            LiveTok PRO v3.0
-                        </h3>
-                        <p class="text-slate-300 text-sm mb-6 leading-relaxed" data-i18n="p1_desc">
-                            Tools multi-stream downloader untuk merekam dan mengunduh siaran live streaming TikTok kualitas HD jernih tanpa watermark secara otomatis.
-                        </p>
+                        <div class="lg:col-span-4 bg-slate-950/90 border border-amber-500/30 rounded-2xl p-6 text-center flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 line-through">Harga Normal: Rp 999.000</span>
+                                <div class="text-4xl font-black text-amber-400 my-1">Rp 299.000</div>
+                                <span class="inline-block px-3 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 text-[11px] font-bold mb-5">
+                                    Sekali Bayar • Aktif Selamanya (Lifetime)
+                                </span>
+                            </div>
 
-                        <div class="bg-slate-950/70 border border-slate-800/80 rounded-xl p-4 mb-6">
-                            <div class="text-xs font-bold uppercase tracking-wider text-cyan-400 mb-2.5" data-i18n="feature_header">Fitur Unggulan:</div>
-                            <ul class="text-xs text-slate-300 space-y-2.5">
-                                <li class="flex items-center gap-2">
-                                    <span class="text-cyan-400 font-bold">✓</span> <span data-i18n="p1_f1">Download Multi-Live Streaming TikTok bersamaan</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <span class="text-cyan-400 font-bold">✓</span> <span data-i18n="p1_f2">Kualitas HD jernih & 100% tanpa watermark</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <span class="text-cyan-400 font-bold">✓</span> <span data-i18n="p1_f3">Akses via browser (Laptop, PC, Android & iPhone)</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <span class="text-cyan-400 font-bold">✓</span> <span data-i18n="p1_f4">Aktivasi instan via QRIS Cuan Digital</span>
-                                </li>
-                            </ul>
+                            <div class="space-y-3">
+                                <a href="jualinaja.html" data-keep-ref="true" onclick="event.stopPropagation()" class="block w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-black text-sm shadow-xl shadow-amber-500/25 transition">
+                                    🔥 Buka Halaman Penjualan Jualin Aja →
+                                </a>
+                                <a data-buy-product="soft_a" href="https://t.me/AppDockHub_Bot?start=buy_soft_a_ref_direct" target="_blank" onclick="event.stopPropagation()" class="block w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs border border-slate-700 transition">
+                                    ⚡ Beli Langsung via Bot Telegram (QRIS)
+                                </a>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="flex flex-col sm:flex-row gap-3 mt-4">
-                        <a href="https://livetok.appdockhub.com" class="flex-1 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:opacity-95 text-white font-bold text-center text-sm shadow-lg shadow-cyan-500/25 transition transform hover:-translate-y-0.5">
-                            <span data-i18n="btn_visit_lp">Buka Halaman Penjualan</span> →
+            <!-- GRID 7 PRODUK LAINNYA -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- PRODUCT 2: REDDIT MANAGER PRO (redit.html) -->
+                <div onclick="goToProduct('redit.html')" class="cursor-pointer group relative rounded-2xl bg-slate-900/85 border border-slate-800 hover:border-orange-500/60 p-7 flex flex-col justify-between card-glow shadow-xl">
+                    <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-[11px] font-extrabold text-white uppercase tracking-wider shadow-lg">
+                        🔥 Global Traffic Engine
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-5">
+                            <div class="w-13 h-13 p-3 rounded-2xl bg-orange-500/15 border border-orange-500/30 text-orange-400 text-2xl font-black">
+                                🔴
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-slate-500 line-through block">Rp 349.000</span>
+                                <span class="text-2xl font-black text-white">Rp 99.000</span>
+                                <span class="text-[11px] text-emerald-400 block font-bold">Lisensi Permanen</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-extrabold text-white mb-2 group-hover:text-orange-400 transition">
+                            Reddit Manager Pro
+                        </h3>
+                        <p class="text-slate-300 text-sm mb-5 leading-relaxed">
+                            Sedot ribuan pengunjung tertarget dari Amerika, Eropa & global lewat otomatisasi multi-akun Reddit tanpa capek posting manual.
+                        </p>
+
+                        <ul class="text-xs text-slate-300 space-y-2.5 bg-slate-950/70 p-4 rounded-xl border border-slate-800/80 mb-6">
+                            <li class="flex items-center gap-2"><span class="text-orange-400 font-bold">✓</span> Multi-Account Browser Profile Terisolasi</li>
+                            <li class="flex items-center gap-2"><span class="text-orange-400 font-bold">✓</span> Auto-Warmup Karma & Account Aging Otomatis</li>
+                            <li class="flex items-center gap-2"><span class="text-orange-400 font-bold">✓</span> Auto-Post, Crosspost & Jadwal Ribuan Subreddit</li>
+                            <li class="flex items-center gap-2"><span class="text-orange-400 font-bold">✓</span> Auto-Upvote & Komentar Cerdas Anti-Suspend</li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-2.5">
+                        <a href="redit.html" data-keep-ref="true" onclick="event.stopPropagation()" class="block w-full py-3.5 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 hover:opacity-95 text-white font-extrabold text-center text-sm shadow-lg shadow-orange-500/20 transition">
+                            🔥 Buka Halaman Penjualan Reddit →
                         </a>
-                        <a href="https://t.me/AppDockHub_Bot?start=buy_livetok_pro" target="_blank" class="px-5 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-center text-sm transition">
-                            <span data-i18n="btn_instant_buy">Beli via QRIS</span>
+                        <a data-buy-product="reddit_pro" href="https://t.me/AppDockHub_Bot?start=buy_reddit_pro_ref_direct" target="_blank" onclick="event.stopPropagation()" class="block w-full py-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-300 font-semibold text-center text-xs transition">
+                            ⚡ Pesan Instan di Bot Telegram
                         </a>
                     </div>
                 </div>
 
-                <!-- PRODUCT 2: JUALIN AJA -->
-                <div class="group relative rounded-2xl bg-slate-900/80 border border-slate-800 p-8 flex flex-col justify-between card-glow transition duration-300 hover:border-emerald-500/50 shadow-xl">
-                    <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-[11px] font-extrabold text-white uppercase tracking-wider shadow-lg">
-                        🚀 High Conversion Tool
+                <!-- PRODUCT 3: FACEBOOK ACCOUNT MANAGER PRO (facebook.html) -->
+                <div onclick="goToProduct('facebook.html')" class="cursor-pointer group relative rounded-2xl bg-slate-900/85 border border-slate-800 hover:border-blue-500/60 p-7 flex flex-col justify-between card-glow shadow-xl">
+                    <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-[11px] font-extrabold text-white uppercase tracking-wider shadow-lg">
+                        🔵 FB Pro & Marketplace
                     </div>
                     <div>
-                        <div class="flex justify-between items-center mb-6">
-                            <span class="px-3 py-1 text-xs font-bold rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                                E-Commerce & Sales
-                            </span>
+                        <div class="flex justify-between items-start mb-5">
+                            <div class="w-13 h-13 p-3 rounded-2xl bg-blue-500/15 border border-blue-500/30 text-blue-400 text-2xl font-black">
+                                🔵
+                            </div>
                             <div class="text-right">
-                                <span class="text-2xl md:text-3xl font-black text-white">Rp 299.000</span>
-                                <span class="text-xs text-slate-400 block font-medium" data-i18n="p2_billing">Lisensi Resmi</span>
+                                <span class="text-xs text-slate-500 line-through block">Rp 349.000</span>
+                                <span class="text-2xl font-black text-white">Rp 99.000</span>
+                                <span class="text-[11px] text-emerald-400 block font-bold">Lisensi Permanen</span>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-emerald-400 transition">
-                            Jualin Aja
+                        <h3 class="text-2xl font-extrabold text-white mb-2 group-hover:text-blue-400 transition">
+                            Facebook Manager Pro
                         </h3>
-                        <p class="text-slate-300 text-sm mb-6 leading-relaxed" data-i18n="p2_desc">
-                            Sistem otomatisasi toko online untuk membantu pebisnis, dropshipper, dan seller meningkatkan efisiensi penjualan dan omset berkali-kali lipat.
+                        <p class="text-slate-300 text-sm mb-5 leading-relaxed">
+                            Ternak & kelola ratusan akun Facebook, babat habis trafik Grup, Fanpage, Reels FB Pro, dan ribuan listing FB Marketplace otomatis!
                         </p>
 
-                        <div class="bg-slate-950/70 border border-slate-800/80 rounded-xl p-4 mb-6">
-                            <div class="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2.5" data-i18n="feature_header">Fitur Unggulan:</div>
-                            <ul class="text-xs text-slate-300 space-y-2.5">
-                                <li class="flex items-center gap-2">
-                                    <span class="text-emerald-400 font-bold">✓</span> <span data-i18n="p2_f1">Otomatisasi alur penjualan & kelola pesanan cepat</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <span class="text-emerald-400 font-bold">✓</span> <span data-i18n="p2_f2">Cocok untuk toko online, dropship & digital marketing</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <span class="text-emerald-400 font-bold">✓</span> <span data-i18n="p2_f3">Bisa dibuka langsung via browser HP maupun PC</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <span class="text-emerald-400 font-bold">✓</span> <span data-i18n="p2_f4">Bantuan support instalasi & update berkelanjutan</span>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="text-xs text-slate-300 space-y-2.5 bg-slate-950/70 p-4 rounded-xl border border-slate-800/80 mb-6">
+                            <li class="flex items-center gap-2"><span class="text-blue-400 font-bold">✓</span> Auto-Post Ratusan Grup, Fanpage & Beranda</li>
+                            <li class="flex items-center gap-2"><span class="text-blue-400 font-bold">✓</span> Auto-Listing FB Marketplace & Sundul Produk</li>
+                            <li class="flex items-center gap-2"><span class="text-blue-400 font-bold">✓</span> Auto-Upload Reels FB Pro Monetisasi In-Stream</li>
+                            <li class="flex items-center gap-2"><span class="text-blue-400 font-bold">✓</span> Anti-Detect Profile Terisolasi Bebas Checkpoint</li>
+                        </ul>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row gap-3 mt-4">
-                        <a href="https://jualin.appdockhub.com" class="flex-1 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:opacity-95 text-white font-bold text-center text-sm shadow-lg shadow-emerald-500/25 transition transform hover:-translate-y-0.5">
-                            <span data-i18n="btn_visit_lp">Buka Halaman Penjualan</span> →
+                    <div class="space-y-2.5">
+                        <a href="facebook.html" data-keep-ref="true" onclick="event.stopPropagation()" class="block w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:opacity-95 text-white font-extrabold text-center text-sm shadow-lg shadow-blue-500/20 transition">
+                            🔥 Buka Halaman Penjualan Facebook →
                         </a>
-                        <a href="https://t.me/AppDockHub_Bot?start=buy_soft_a" target="_blank" class="px-5 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-center text-sm transition">
-                            <span data-i18n="btn_instant_buy">Beli via QRIS</span>
+                        <a data-buy-product="fb_pro" href="https://t.me/AppDockHub_Bot?start=buy_fb_pro_ref_direct" target="_blank" onclick="event.stopPropagation()" class="block w-full py-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-300 font-semibold text-center text-xs transition">
+                            ⚡ Pesan Instan di Bot Telegram
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 4: TIKTOK MULTI-SCREEN PRO / LIVETOK PRO (tiktok.html) -->
+                <div onclick="goToProduct('tiktok.html')" class="cursor-pointer group relative rounded-2xl bg-slate-900/85 border border-slate-800 hover:border-cyan-500/60 p-7 flex flex-col justify-between card-glow shadow-xl">
+                    <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-gradient-to-r from-cyan-500 to-pink-500 text-[11px] font-extrabold text-white uppercase tracking-wider shadow-lg">
+                        📱 FYP & Affiliate Engine
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-5">
+                            <div class="w-13 h-13 p-3 rounded-2xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-400 text-2xl font-black">
+                                📱
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-slate-500 line-through block">Rp 349.000</span>
+                                <span class="text-2xl font-black text-white">Rp 99.000</span>
+                                <span class="text-[11px] text-emerald-400 block font-bold">Lisensi Permanen</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-extrabold text-white mb-2 group-hover:text-cyan-400 transition">
+                            TikTok Multi-Screen Pro
+                        </h3>
+                        <p class="text-slate-300 text-sm mb-5 leading-relaxed">
+                            Jalankan puluhan akun TikTok sekaligus dalam 1 layar! Dilengkapi Auto-Warmup FYP, Auto Upload Keranjang Kuning & Perekam Live HD.
+                        </p>
+
+                        <ul class="text-xs text-slate-300 space-y-2.5 bg-slate-950/70 p-4 rounded-xl border border-slate-800/80 mb-6">
+                            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Multi-Screen Sync Puluhan Akun TikTok Sekaligus</li>
+                            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Auto-Scroll, Auto-Like, Comment & Warmup FYP</li>
+                            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Auto-Upload Konten Affiliate & Penjadwalan</li>
+                            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Multi-Live Stream Recorder HD Tanpa Watermark</li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-2.5">
+                        <a href="tiktok.html" data-keep-ref="true" onclick="event.stopPropagation()" class="block w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:opacity-95 text-white font-extrabold text-center text-sm shadow-lg shadow-cyan-500/20 transition">
+                            🔥 Buka Halaman Penjualan TikTok →
+                        </a>
+                        <a data-buy-product="tiktok_pro" href="https://t.me/AppDockHub_Bot?start=buy_tiktok_pro_ref_direct" target="_blank" onclick="event.stopPropagation()" class="block w-full py-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-300 font-semibold text-center text-xs transition">
+                            ⚡ Pesan Instan di Bot Telegram
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 5: LINKEDIN MANAGER PRO (linkedin.html) -->
+                <div onclick="goToProduct('linkedin.html')" class="cursor-pointer group relative rounded-2xl bg-slate-900/85 border border-slate-800 hover:border-sky-500/60 p-7 flex flex-col justify-between card-glow shadow-xl">
+                    <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-gradient-to-r from-sky-500 to-blue-700 text-[11px] font-extrabold text-white uppercase tracking-wider shadow-lg">
+                        💼 B2B Client Closer
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-5">
+                            <div class="w-13 h-13 p-3 rounded-2xl bg-sky-500/15 border border-sky-500/30 text-sky-400 text-2xl font-black">
+                                💼
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-slate-500 line-through block">Rp 349.000</span>
+                                <span class="text-2xl font-black text-white">Rp 99.000</span>
+                                <span class="text-[11px] text-emerald-400 block font-bold">Lisensi Permanen</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-extrabold text-white mb-2 group-hover:text-sky-400 transition">
+                            LinkedIn Manager Pro
+                        </h3>
+                        <p class="text-slate-300 text-sm mb-5 leading-relaxed">
+                            Otomatisasi pencarian prospek B2B, CEO, Founder & HRD! Kirim undangan koneksi dan pesan penawaran beruntun secara cerdas.
+                        </p>
+
+                        <ul class="text-xs text-slate-300 space-y-2.5 bg-slate-950/70 p-4 rounded-xl border border-slate-800/80 mb-6">
+                            <li class="flex items-center gap-2"><span class="text-sky-400 font-bold">✓</span> Auto-Connect Tertarget Berdasarkan Jabatan & Industri</li>
+                            <li class="flex items-center gap-2"><span class="text-sky-400 font-bold">✓</span> Smart Follow-Up Message & Drip Campaign B2B</li>
+                            <li class="flex items-center gap-2"><span class="text-sky-400 font-bold">✓</span> Auto-Endorse, Profile Visit & Post Scheduler</li>
+                            <li class="flex items-center gap-2"><span class="text-sky-400 font-bold">✓</span> Multi-Account Session Aman Tanpa Pembatasan</li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-2.5">
+                        <a href="linkedin.html" data-keep-ref="true" onclick="event.stopPropagation()" class="block w-full py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-700 hover:opacity-95 text-white font-extrabold text-center text-sm shadow-lg shadow-sky-500/20 transition">
+                            🔥 Buka Halaman Penjualan LinkedIn →
+                        </a>
+                        <a data-buy-product="linkedin_pro" href="https://t.me/AppDockHub_Bot?start=buy_linkedin_pro_ref_direct" target="_blank" onclick="event.stopPropagation()" class="block w-full py-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-300 font-semibold text-center text-xs transition">
+                            ⚡ Pesan Instan di Bot Telegram
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 6: PINTEREST MANAGER PRO (pinterest.html) -->
+                <div onclick="goToProduct('pinterest.html')" class="cursor-pointer group relative rounded-2xl bg-slate-900/85 border border-slate-800 hover:border-rose-500/60 p-7 flex flex-col justify-between card-glow shadow-xl">
+                    <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-gradient-to-r from-rose-500 to-red-600 text-[11px] font-extrabold text-white uppercase tracking-wider shadow-lg">
+                        📌 Passive Traffic Machine
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-5">
+                            <div class="w-13 h-13 p-3 rounded-2xl bg-rose-500/15 border border-rose-500/30 text-rose-400 text-2xl font-black">
+                                📌
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-slate-500 line-through block">Rp 349.000</span>
+                                <span class="text-2xl font-black text-white">Rp 99.000</span>
+                                <span class="text-[11px] text-emerald-400 block font-bold">Lisensi Permanen</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-extrabold text-white mb-2 group-hover:text-rose-400 transition">
+                            Pinterest Manager Pro
+                        </h3>
+                        <p class="text-slate-300 text-sm mb-5 leading-relaxed">
+                            Sulap akun Pinterest menjadi mesin penyedot trafik organik pasif ke Blog AdSense, Shopee/Amazon Affiliate, & Toko Online 24 jam!
+                        </p>
+
+                        <ul class="text-xs text-slate-300 space-y-2.5 bg-slate-950/70 p-4 rounded-xl border border-slate-800/80 mb-6">
+                            <li class="flex items-center gap-2"><span class="text-rose-400 font-bold">✓</span> Bulk Auto-Pin Gambar & Video + Direct Link URL</li>
+                            <li class="flex items-center gap-2"><span class="text-rose-400 font-bold">✓</span> Smart Board Manager & SEO Keyword Injector</li>
+                            <li class="flex items-center gap-2"><span class="text-rose-400 font-bold">✓</span> Auto-Repin & Follow Niche Tertarget Otomatis</li>
+                            <li class="flex items-center gap-2"><span class="text-rose-400 font-bold">✓</span> Multi-Account Anti-Ban & Jadwal Otomatis Harian</li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-2.5">
+                        <a href="pinterest.html" data-keep-ref="true" onclick="event.stopPropagation()" class="block w-full py-3.5 rounded-xl bg-gradient-to-r from-rose-500 to-red-600 hover:opacity-95 text-white font-extrabold text-center text-sm shadow-lg shadow-rose-500/20 transition">
+                            🔥 Buka Halaman Penjualan Pinterest →
+                        </a>
+                        <a data-buy-product="pinterest_pro" href="https://t.me/AppDockHub_Bot?start=buy_pinterest_pro_ref_direct" target="_blank" onclick="event.stopPropagation()" class="block w-full py-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-300 font-semibold text-center text-xs transition">
+                            ⚡ Pesan Instan di Bot Telegram
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 7: X (TWITTER) MANAGER PRO (x.html) -->
+                <div onclick="goToProduct('x.html')" class="cursor-pointer group relative rounded-2xl bg-slate-900/85 border border-slate-800 hover:border-indigo-500/60 p-7 flex flex-col justify-between card-glow shadow-xl">
+                    <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 text-[11px] font-extrabold text-white uppercase tracking-wider shadow-lg">
+                        🐦 Viral Thread & Ads Engine
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-5">
+                            <div class="w-13 h-13 p-3 rounded-2xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 text-2xl font-black">
+                                🐦
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-slate-500 line-through block">Rp 349.000</span>
+                                <span class="text-2xl font-black text-white">Rp 99.000</span>
+                                <span class="text-[11px] text-emerald-400 block font-bold">Lisensi Permanen</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-extrabold text-white mb-2 group-hover:text-indigo-400 transition">
+                            X (Twitter) Manager Pro
+                        </h3>
+                        <p class="text-slate-300 text-sm mb-5 leading-relaxed">
+                            Kuasai algoritma X (Twitter)! Ternak puluhan akun, buat Auto-Thread viral, suntikkan balasan otomatis di tren populer & panen impresi.
+                        </p>
+
+                        <ul class="text-xs text-slate-300 space-y-2.5 bg-slate-950/70 p-4 rounded-xl border border-slate-800/80 mb-6">
+                            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">✓</span> Auto-Thread Composer & Penjadwalan Konten Viral</li>
+                            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">✓</span> Smart Auto-Reply di Tweet Trending (Banjir Klik!)</li>
+                            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">✓</span> Cross-Boost Retweet & Like Antar Akun Ternak</li>
+                            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">✓</span> Siap untuk Monetisasi X Ads & Link Affiliate</li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-2.5">
+                        <a href="x.html" data-keep-ref="true" onclick="event.stopPropagation()" class="block w-full py-3.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 hover:opacity-95 text-white font-extrabold text-center text-sm shadow-lg shadow-indigo-500/20 transition">
+                            🔥 Buka Halaman Penjualan X Pro →
+                        </a>
+                        <a data-buy-product="x_pro" href="https://t.me/AppDockHub_Bot?start=buy_x_pro_ref_direct" target="_blank" onclick="event.stopPropagation()" class="block w-full py-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-300 font-semibold text-center text-xs transition">
+                            ⚡ Pesan Instan di Bot Telegram
                         </a>
                     </div>
                 </div>
 
             </div>
 
-            <!-- UPCOMING PRODUCTS NOTICE -->
-            <div class="mt-12 text-center">
-                <div class="inline-block p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400 max-w-xl">
-                    <span class="font-bold text-brand-accent">✨ More Tools Coming Soon:</span> 
-                    <span data-i18n="more_tools_text">Kami sedang menyiapkan produk digital dan software otomatisasi baru yang akan segera hadir di katalog ini!</span>
+            <!-- PRODUCT 8: CYBER ORBIT GAME CARD -->
+            <div class="mt-10">
+                <div onclick="goToProduct('cyber-orbit.html')" class="cursor-pointer group relative rounded-3xl bg-gradient-to-r from-cyan-950/50 via-slate-900 to-indigo-950/50 border border-cyan-500/40 p-7 md:p-8 card-glow shadow-xl">
+                    <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+                            <div class="w-16 h-16 rounded-2xl bg-cyan-500/15 border-2 border-cyan-400 flex items-center justify-center text-3xl shadow-lg shadow-cyan-500/20 shrink-0">
+                                🎮
+                            </div>
+                            <div>
+                                <div class="inline-block px-3 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-[11px] font-extrabold uppercase mb-1.5">
+                                    GOOGLE PLAY STORE OFFICIAL GAME • REWARD SALDO HARIAN
+                                </div>
+                                <h3 class="text-2xl font-black text-white group-hover:text-cyan-400 transition">
+                                    Cyber Orbit: Quantum Core (Android Game 60 FPS)
+                                </h3>
+                                <p class="text-slate-300 text-sm mt-1 max-w-2xl">
+                                    Game ketangkasan orbit neon 60 FPS dengan 2.000 Level menantang! Mainkan gratis di HP Android Anda, kumpulkan reward saldo harian, dan dapatkan bonus referral Rp 50 setiap kelipatan 10 level!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0">
+                            <a href="cyber-orbit.html" data-keep-ref="true" onclick="event.stopPropagation()" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-slate-950 font-black text-sm text-center shadow-lg shadow-cyan-500/20 transition">
+                                🎮 Lihat Detail & Cara Cuan Game →
+                            </a>
+                            <a id="playStoreDirectBtn" href="https://appdockhub.com/play?ref=direct" target="_blank" onclick="event.stopPropagation()" class="px-5 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs text-center border border-slate-700 transition flex items-center justify-center">
+                                ▶ Download Play Store
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- AFFILIATE PROGRAM HIGHLIGHT -->
-    <section id="affiliate" class="py-20 bg-gradient-to-b from-[#090d16] via-[#0d1424] to-[#090d16]">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="bg-gradient-to-tr from-indigo-950/70 via-slate-900 to-emerald-950/40 border border-indigo-500/30 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
-                <div class="absolute -right-16 -top-16 w-56 h-56 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-                <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-                    <div class="max-w-2xl">
-                        <div class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-bold text-xs uppercase tracking-wider mb-4">
-                            🤝 Official Affiliate Program
-                        </div>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-4" data-i18n="aff_title">
-                            Raih Komisi 30% dari Setiap Penjualan
+    <!-- FREE AI STUDIO & DRAMA GENERATOR HIGHLIGHT -->
+    <section id="ai-gratis" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="rounded-3xl bg-gradient-to-br from-slate-900 via-indigo-950/60 to-slate-900 border border-indigo-500/40 p-8 md:p-12 shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8">
+                        <span class="px-3.5 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-extrabold uppercase">
+                            🎁 100% GRATIS DI BOT TELEGRAM KAMI
+                        </span>
+                        <h2 class="text-3xl md:text-4xl font-black text-white mt-4 mb-3">
+                            Coba Gratis: Generate Drama Viral, Text-to-Video AI & Motion Control 60 FPS!
                         </h2>
-                        <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6" data-i18n="aff_desc">
-                            Sebarkan link Landing Page software AppDockHub ke teman, grup sosial media, atau komunitas Anda. Dapatkan komisi <span class="text-emerald-400 font-bold">Rp 89.700</span> (Jualin Aja) dan <span class="text-cyan-400 font-bold">Rp 29.700</span> (LiveTok PRO) untuk setiap pembeli yang transfer!
+                        <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6">
+                            Sebelum membeli software, Anda bisa langsung mencoba fitur <strong>Studio AI Gratis</strong> di Bot Telegram resmi kami: mulai dari menonton & mendownload <strong>Drama Pendek Viral Sub Indo</strong>, membuat <strong>Video AI dari Teks/Foto dengan 6 Efek Kamera Motion Control</strong>, melukis gambar <strong>Flux HD Tanpa Watermark</strong>, hingga membuat Script Konten FYP!
                         </p>
-                        <div class="flex flex-wrap gap-4 text-xs font-semibold text-slate-300">
-                            <div class="flex items-center gap-1.5 bg-slate-950/60 px-3 py-1.5 rounded-lg border border-slate-800">
-                                <span>🍪</span> <span data-i18n="aff_point1">Cookie 30 Hari Otomatis</span>
-                            </div>
-                            <div class="flex items-center gap-1.5 bg-slate-950/60 px-3 py-1.5 rounded-lg border border-slate-800">
-                                <span>⚡</span> <span data-i18n="aff_point2">Tanpa Modal & Tanpa Stok</span>
-                            </div>
-                            <div class="flex items-center gap-1.5 bg-slate-950/60 px-3 py-1.5 rounded-lg border border-slate-800">
-                                <span>💵</span> <span data-i18n="aff_point3">Cair ke Bank / E-Wallet</span>
-                            </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs font-bold text-slate-200">
+                            <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800">🍿 Generate Drama Sub Indo</div>
+                            <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800">🎬 Text-to-Video AI 60 FPS</div>
+                            <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800">🖼️ Image-to-Video AI</div>
+                            <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800">🕹️ 6 Preset Motion Control</div>
+                            <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800">🎨 Flux HD Tanpa Watermark</div>
+                            <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800">🤖 Arena AI (GPT/DeepSeek)</div>
                         </div>
                     </div>
-
-                    <div class="text-center w-full md:w-auto">
-                        <a href="https://t.me/AppDockHub_Bot?start=affiliate" target="_blank" class="inline-flex w-full md:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-sm shadow-xl shadow-emerald-500/20 transition transform hover:-translate-y-0.5 whitespace-nowrap">
-                            <span data-i18n="aff_btn">Daftar Jadi Afiliator Gratis →</span>
-                        </a>
-                        <span class="block text-[11px] text-slate-400 mt-2" data-i18n="aff_subtext">Aktivasi kode instan di Telegram bot</span>
+                    <div class="lg:col-span-4 text-center">
+                        <div class="bg-slate-950/90 border border-indigo-500/40 rounded-2xl p-6">
+                            <div class="text-5xl mb-3">🤖</div>
+                            <div class="text-lg font-extrabold text-white mb-1">@AppDockHub_Bot</div>
+                            <p class="text-xs text-slate-400 mb-5">Akses langsung di Telegram tanpa kartu kredit & tanpa biaya langganan.</p>
+                            <a id="aiStudioBotBtn" href="https://t.me/AppDockHub_Bot?start=ref_direct" target="_blank" class="block w-full py-4 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:opacity-95 text-white font-black text-sm shadow-xl transition">
+                                🚀 Buka Studio AI Gratis di Bot →
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
-    <section id="features" class="py-24">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-xs uppercase tracking-widest font-bold text-brand-accent mb-3" data-i18n="why_subtitle">Keunggulan Sistem</h2>
-                <p class="text-3xl font-extrabold text-white tracking-tight" data-i18n="why_title">Dirancang untuk Pebisnis, Seller & Kreator</p>
+    <!-- AFFILIATE LINK GENERATOR SECTION (2-TIER: 30% + 5%) -->
+    <section id="afiliasi" class="py-20 bg-[#090f1e]/90 border-y border-slate-800/80">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-extrabold uppercase tracking-wider">
+                    💸 PROGRAM KEMITRAAN AFILIASI 2-TIER
+                </span>
+                <h2 class="text-3xl md:text-4xl font-black text-white mt-4 mb-3">
+                    Komisi Langsung 30% + Komisi Pasif Tim 5%
+                </h2>
+                <p class="text-slate-300 text-sm md:text-base">
+                    Bagikan halaman katalog ini atau halaman penjualan produk mana pun dengan ID Referral Telegram Anda. Setiap pengunjung yang mengklik tombol beli di web akan <strong>otomatis diarahkan ke Bot Telegram dengan mengunci ID Referral Anda</strong>!
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800/80 hover:border-slate-700 transition">
-                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-2xl mb-6">📱</div>
-                    <h3 class="text-lg font-bold text-white mb-2" data-i18n="f1_title">Akses Fleksibel (HP & PC)</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="f1_desc">
-                        Aplikasi berbasis web modern. Cukup buka lewat browser di HP Android, iPhone, laptop, maupun PC Anda tanpa instalasi rumit.
-                    </p>
+            <!-- Interactive Generator Box -->
+            <div class="bg-slate-900 border border-emerald-500/40 rounded-3xl p-6 md:p-8 shadow-2xl">
+                <label class="block text-sm font-bold text-slate-200 mb-2">
+                    Masukkan ID Telegram / Kode Referral Anda untuk Membuat Link Semua Halaman Produk:
+                </label>
+                <div class="flex flex-col sm:flex-row gap-3 mb-6">
+                    <input
+                        id="customRefInput"
+                        type="text"
+                        placeholder="Contoh: 8916556502 atau username_anda"
+                        class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-4 py-3.5 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-emerald-500"
+                    />
+                    <button
+                        onclick="generateAllAffiliateLinks()"
+                        class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black text-sm shadow-lg shadow-emerald-500/20 transition"
+                    >
+                        ⚡ Buat Link Promosi Saya
+                    </button>
                 </div>
-                <div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800/80 hover:border-slate-700 transition">
-                    <div class="w-12 h-12 rounded-xl bg-brand-accent/10 text-brand-accent flex items-center justify-center text-2xl mb-6">🛡️</div>
-                    <h3 class="text-lg font-bold text-white mb-2" data-i18n="f2_title">Aman & Terverifikasi QRIS</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="f2_desc">
-                        Pembayaran didukung QRIS resmi (BCA, Mandiri, BRI, BNI, DANA, GoPay, ShopeePay) dengan verifikasi lisensi otomatis.
-                    </p>
-                </div>
-                <div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800/80 hover:border-slate-700 transition">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl mb-6">🔄</div>
-                    <h3 class="text-lg font-bold text-white mb-2" data-i18n="f3_title">Dukungan Pindah Device</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="f3_desc">
-                        Ganti HP atau laptop baru? Lisensi dapat dipindahkan secara resmi kapan saja melalui bot Telegram kami.
-                    </p>
+
+                <div id="generatedLinksContainer" class="hidden space-y-3 pt-4 border-t border-slate-800">
+                    <div class="text-xs font-extrabold uppercase tracking-wider text-emerald-400 mb-2">
+                        ✅ Link Halaman Penjualan Siap Sebar (Otomatis Mengunci Komisi Anda):
+                    </div>
+                    <div id="linksListGrid" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ SECTION -->
-    <section id="faq" class="py-20 bg-[#0d1322]/50 border-t border-slate-800/60">
+    <!-- KEUNGGULAN SISTEM -->
+    <section id="keunggulan" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <h2 class="text-3xl font-black text-white">Mengapa Ribuan Pebisnis Memilih AppDockHub?</h2>
+                <p class="text-slate-400 text-sm mt-2">Infrastruktur lisensi cloud modern dengan dukungan penuh & keamanan tingkat tinggi.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-7 rounded-2xl bg-slate-900/60 border border-slate-800">
+                    <div class="text-3xl mb-4">⚡</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Aktivasi QRIS Instan 24/7</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Mendukung seluruh Bank & E-Wallet (BCA, Mandiri, BRI, BNI, DANA, GoPay, OVO, ShopeePay). Kunci lisensi dikirim langsung oleh Bot Telegram.</p>
+                </div>
+                <div class="p-7 rounded-2xl bg-slate-900/60 border border-slate-800">
+                    <div class="text-3xl mb-4">🛡️</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Proteksi 1 Lisensi = 1 Perangkat</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Sistem HWID Signature mengunci lisensi Anda dengan aman dan mendukung fitur pindah perangkat resmi kapan saja lewat Bot Telegram.</p>
+                </div>
+                <div class="p-7 rounded-2xl bg-slate-900/60 border border-slate-800">
+                    <div class="text-3xl mb-4">🤝</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Komisi Real-Time & Transparan</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Setiap penjualan dari link web maupun link bot Anda langsung mengirimkan notifikasi saldo real-time ke Telegram Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-[#090f1e]/90 border-t border-slate-800/80">
         <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-3xl font-extrabold text-white text-center mb-12" data-i18n="faq_title">Pertanyaan yang Sering Diajukan</h2>
-            
+            <h2 class="text-3xl font-black text-white text-center mb-10">Pertanyaan yang Sering Diajukan (FAQ)</h2>
             <div class="space-y-4">
-                <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800">
-                    <h3 class="text-base font-bold text-white mb-2" data-i18n="faq_q1">Bagaimana cara mengakses software setelah melakukan pembayaran?</h3>
-                    <p class="text-sm text-slate-300 leading-relaxed" data-i18n="faq_a1">
-                        Setelah pembayaran QRIS disetujui oleh admin, bot Telegram kami otomatis mengirimkan Kunci Lisensi resmi dan link akses aplikasi langsung ke chat Anda.
-                    </p>
+                <div class="p-6 rounded-2xl bg-slate-900/70 border border-slate-800">
+                    <h3 class="font-bold text-white text-base mb-1.5">1. Apakah lisensi software berlaku sekali bayar atau bulanan?</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Seluruh software di katalog AppDockHub berlaku <strong>Sekali Bayar (One-Time Payment)</strong> untuk penggunaan permanen di 1 perangkat fisik beserta gratis update fitur.</p>
                 </div>
-
-                <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800">
-                    <h3 class="text-base font-bold text-white mb-2" data-i18n="faq_q2">Apakah software bisa dibuka di HP Android atau iPhone?</h3>
-                    <p class="text-sm text-slate-300 leading-relaxed" data-i18n="faq_a2">
-                        Bisa! Software kami dapat dibuka langsung melalui browser (Chrome, Safari, Edge, dll.) baik dari HP Android, iPhone, laptop, maupun PC.
-                    </p>
+                <div class="p-6 rounded-2xl bg-slate-900/70 border border-slate-800">
+                    <h3 class="font-bold text-white text-base mb-1.5">2. Bagaimana cara kerja link referral pada tiap halaman produk?</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Saat Anda membagikan link seperti <code>appdockhub.com/?ref=ID_ANDA</code> atau <code>appdockhub.com/redit.html?ref=ID_ANDA</code>, sistem web otomatis menyimpan ID Anda dan mengarahkan semua tombol pembelian di seluruh halaman produk ke Bot Telegram dengan parameter <code>?start=buy_produk_ref_ID_ANDA</code>.</p>
                 </div>
-
-                <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800">
-                    <h3 class="text-base font-bold text-white mb-2" data-i18n="faq_q3">Bolehkah membuka di browser berbeda pada perangkat yang sama?</h3>
-                    <p class="text-sm text-slate-300 leading-relaxed" data-i18n="faq_a3">
-                        Boleh sekali. Selama masih di HP atau laptop fisik yang sama, Anda bebas membuka lewat browser apa pun tanpa perlu aktivasi ulang.
-                    </p>
-                </div>
-
-                <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800">
-                    <h3 class="text-base font-bold text-white mb-2" data-i18n="faq_q4">Bagaimana cara mendapatkan komisi 30% dari program afiliasi?</h3>
-                    <p class="text-sm text-slate-300 leading-relaxed" data-i18n="faq_a4">
-                        Cukup buka bot Telegram kami, ketik <code>daftar &lt;nama_anda&gt;</code>, dan bagikan link Landing Page yang diberikan. Setiap ada yang membeli via link Anda, komisi 30% otomatis masuk ke saldo Anda.
-                    </p>
+                <div class="p-6 rounded-2xl bg-slate-900/70 border border-slate-800">
+                    <h3 class="font-bold text-white text-base mb-1.5">3. Bagaimana jika saya ganti laptop atau HP baru?</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Anda dapat memindahkan lisensi ke perangkat baru kapan saja secara gratis melalui perintah <code>pindahdevice &lt;HWID_LAMA&gt; &lt;HWID_BARU&gt;</code> di Bot Telegram resmi kami.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-12 border-t border-slate-800/80 bg-[#090d16]">
+    <footer class="py-12 border-t border-slate-800 bg-[#050811] text-xs text-slate-400">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-3">
-                <span class="text-lg font-bold text-white">AppDock<span class="text-brand-accent">Hub</span></span>
-                <span class="text-xs text-slate-500">© 2026 AppDockHub Official. All rights reserved.</span>
+            <div>
+                <span class="text-base font-black text-white">AppDock<span class="text-brand-accent">Hub</span></span>
+                <p class="mt-1">© 2026 AppDockHub Official Ecosystem. All rights reserved.</p>
             </div>
-            
-            <div class="flex items-center gap-6 text-sm text-slate-400">
-                <a href="#products" class="hover:text-white transition" data-i18n="nav_products">Katalog</a>
-                <a href="#affiliate" class="hover:text-white transition" data-i18n="nav_affiliate">Afiliasi</a>
-                <a href="#features" class="hover:text-white transition" data-i18n="nav_why">Keunggulan</a>
-                <a href="#faq" class="hover:text-white transition" data-i18n="nav_faq">FAQ</a>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="jualinaja.html" data-keep-ref="true" class="hover:text-white">Jualin Aja</a>
+                <a href="redit.html" data-keep-ref="true" class="hover:text-white">Reddit Pro</a>
+                <a href="facebook.html" data-keep-ref="true" class="hover:text-white">Facebook Pro</a>
+                <a href="tiktok.html" data-keep-ref="true" class="hover:text-white">TikTok Pro</a>
+                <a href="linkedin.html" data-keep-ref="true" class="hover:text-white">LinkedIn Pro</a>
+                <a href="pinterest.html" data-keep-ref="true" class="hover:text-white">Pinterest Pro</a>
+                <a href="x.html" data-keep-ref="true" class="hover:text-white">X (Twitter) Pro</a>
+                <a href="cyber-orbit.html" data-keep-ref="true" class="hover:text-white">Cyber Orbit</a>
+                <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
             </div>
         </div>
     </footer>
 
-    <!-- LANGUAGE SWITCHER JAVASCRIPT LOGIC -->
+    <!-- GLOBAL REFERRAL TRACKING & LINK REWRITER SCRIPT -->
     <script>
-        const translations = {
-            id: {
-                nav_products: "Katalog Software",
-                nav_affiliate: "Program Afiliasi 30%",
-                nav_why: "Keunggulan",
-                nav_faq: "FAQ",
-                nav_cta: "Lihat Produk",
-                hero_badge: "Software Otomatisasi & Digital Tools Siap Pakai",
-                hero_title_1: "Tingkatkan Omset & Bisnis.",
-                hero_title_2: "Bekerja 10x Lebih Cepat.",
-                hero_desc: "Solusi software modern, bot downloader streaming, dan sistem otomatisasi penjualan toko online. Buka langsung di browser laptop, PC, HP Android maupun iPhone tanpa setup rumit.",
-                hero_btn_explore: "Pilih Software Unggulan",
-                hero_btn_bot: "Aktivasi di Telegram",
-                stat_browser: "Bisa di HP & PC",
-                stat_delivery: "Aktivasi 1 Menit",
-                stat_commission: "Komisi Afiliasi",
-                stat_rating: "Rating Pengguna",
-                products_subtitle: "Katalog Resmi",
-                products_title: "Software & Digital Systems",
-                products_desc: "Semua produk terintegrasi dengan sistem lisensi resmi dan dapat diakses langsung melalui browser Anda.",
-                feature_header: "Fitur Unggulan:",
-                p1_desc: "Tools multi-stream downloader untuk merekam dan mengunduh siaran live streaming TikTok kualitas HD jernih tanpa watermark secara otomatis.",
-                p1_f1: "Download Multi-Live Streaming TikTok bersamaan",
-                p1_f2: "Kualitas HD jernih & 100% tanpa watermark",
-                p1_f3: "Akses via browser (Laptop, PC, Android & iPhone)",
-                p1_f4: "Aktivasi instan via QRIS Cuan Digital",
-                p2_billing: "Lisensi Resmi",
-                p2_desc: "Sistem otomatisasi toko online untuk membantu pebisnis, dropshipper, dan seller meningkatkan efisiensi penjualan dan omset berkali-kali lipat.",
-                p2_f1: "Otomatisasi alur penjualan & kelola pesanan cepat",
-                p2_f2: "Cocok untuk toko online, dropship & digital marketing",
-                p2_f3: "Bisa dibuka langsung via browser HP maupun PC",
-                p2_f4: "Bantuan support instalasi & update berkelanjutan",
-                btn_visit_lp: "Buka Halaman Penjualan",
-                btn_instant_buy: "Beli via QRIS",
-                more_tools_text: "Kami sedang menyiapkan produk digital dan software otomatisasi baru yang akan segera hadir di katalog ini!",
-                aff_title: "Raih Komisi 30% dari Setiap Penjualan",
-                aff_desc: "Sebarkan link Landing Page software AppDockHub ke teman, grup sosial media, atau komunitas Anda. Dapatkan komisi Rp 89.700 (Jualin Aja) dan Rp 29.700 (LiveTok PRO) untuk setiap pembeli yang transfer!",
-                aff_point1: "Cookie 30 Hari Otomatis",
-                aff_point2: "Tanpa Modal & Tanpa Stok",
-                aff_point3: "Cair ke Bank / E-Wallet",
-                aff_btn: "Daftar Jadi Afiliator Gratis →",
-                aff_subtext: "Aktivasi kode instan di Telegram bot",
-                why_subtitle: "Keunggulan Sistem",
-                why_title: "Dirancang untuk Pebisnis, Seller & Kreator",
-                f1_title: "Akses Fleksibel (HP & PC)",
-                f1_desc: "Aplikasi berbasis web modern. Cukup buka lewat browser di HP Android, iPhone, laptop, maupun PC Anda tanpa instalasi rumit.",
-                f2_title: "Aman & Terverifikasi QRIS",
-                f2_desc: "Pembayaran didukung QRIS resmi (BCA, Mandiri, BRI, BNI, DANA, GoPay, ShopeePay) dengan verifikasi lisensi otomatis.",
-                f3_title: "Dukungan Pindah Device",
-                f3_desc: "Ganti HP atau laptop baru? Lisensi dapat dipindahkan secara resmi kapan saja melalui bot Telegram kami.",
-                faq_title: "Pertanyaan yang Sering Diajukan",
-                faq_q1: "Bagaimana cara mengakses software setelah melakukan pembayaran?",
-                faq_a1: "Setelah pembayaran QRIS disetujui oleh admin, bot Telegram kami otomatis mengirimkan Kunci Lisensi resmi dan link akses aplikasi langsung ke chat Anda.",
-                faq_q2: "Apakah software bisa dibuka di HP Android atau iPhone?",
-                faq_a2: "Bisa! Software kami dapat dibuka langsung melalui browser (Chrome, Safari, Edge, dll.) baik dari HP Android, iPhone, laptop, maupun PC.",
-                faq_q3: "Bolehkah membuka di browser berbeda pada perangkat yang sama?",
-                faq_a3: "Boleh sekali. Selama masih di HP atau laptop fisik yang sama, Anda bebas membuka lewat browser apa pun tanpa perlu aktivasi ulang.",
-                faq_q4: "Bagaimana cara mendapatkan komisi 30% dari program afiliasi?",
-                faq_a4: "Cukup buka bot Telegram kami, ketik daftar <nama_anda>, dan bagikan link Landing Page yang diberikan. Setiap ada yang membeli via link Anda, komisi 30% otomatis masuk ke saldo Anda."
-            },
-            en: {
-                nav_products: "Software Catalog",
-                nav_affiliate: "30% Affiliate Program",
-                nav_why: "Why Us",
-                nav_faq: "FAQ",
-                nav_cta: "Explore Store",
-                hero_badge: "Ready-to-Use Digital Automation & Tools",
-                hero_title_1: "Scale Your Business Revenue.",
-                hero_title_2: "Work 10x Faster.",
-                hero_desc: "Modern software solutions, livestream downloader bots, and e-commerce sales automation. Access instantly on any browser: Android, iPhone, PC, or Laptop.",
-                hero_btn_explore: "Explore Premium Software",
-                hero_btn_bot: "Activate on Telegram",
-                stat_browser: "Mobile & PC Ready",
-                stat_delivery: "1-Min Activation",
-                stat_commission: "Affiliate Commission",
-                stat_rating: "User Rating",
-                products_subtitle: "Official Catalog",
-                products_title: "Software & Digital Systems",
-                products_desc: "All products feature official license management and run seamlessly directly in your browser.",
-                feature_header: "Key Features:",
-                p1_desc: "Multi-stream downloader tool to record and download TikTok live streams in crystal-clear HD quality with zero watermarks automatically.",
-                p1_f1: "Download multiple TikTok livestreams simultaneously",
-                p1_f2: "Crystal-clear HD quality & 100% watermark-free",
-                p1_f3: "Browser access (Laptop, PC, Android & iPhone)",
-                p1_f4: "Instant license activation via QRIS & Telegram",
-                p2_billing: "Official License",
-                p2_desc: "E-commerce sales automation system to help online sellers, dropshippers, and marketers maximize order processing speed and revenue.",
-                p2_f1: "Automated sales pipeline & fast order management",
-                p2_f2: "Built for online shops, dropshipping & digital marketing",
-                p2_f3: "Open directly in browser on Android, iOS, or PC",
-                p2_f4: "Includes setup support & lifetime regular updates",
-                btn_visit_lp: "Visit Product Sales Page",
-                btn_instant_buy: "Buy via QRIS",
-                more_tools_text: "We are actively preparing new digital systems and automation tools coming very soon to this catalog!",
-                aff_title: "Earn 30% Commission On Every Sale",
-                aff_desc: "Promote AppDockHub landing pages to your audience or community. Earn Rp 89,700 (Jualin Aja) and Rp 29,700 (LiveTok PRO) straight to your bank account for each buyer!",
-                aff_point1: "Automatic 30-Day Cookies",
-                aff_point2: "Zero Upfront Cost & No Stock",
-                aff_point3: "Direct Bank & E-Wallet Payout",
-                aff_btn: "Join Affiliate Program Free →",
-                aff_subtext: "Instant code activation in Telegram bot",
-                why_subtitle: "System Advantages",
-                why_title: "Crafted for Builders, Sellers & Creators",
-                f1_title: "Flexible Access (Mobile & PC)",
-                f1_desc: "Modern cloud-native web apps. Run directly inside your browser on Android, iPhone, Windows, or Mac without complex installation.",
-                f2_title: "Secure & Verified Payments",
-                f2_desc: "Transactions verified securely via official QRIS (all banks & e-wallets) with instant automated license delivery.",
-                f3_title: "Official Device Transfer",
-                f3_desc: "Upgrading your phone or laptop? Transfer your license officially anytime with our 1-click Telegram bot.",
-                faq_title: "Frequently Asked Questions",
-                faq_q1: "How do I access the software after completing payment?",
-                faq_a1: "As soon as your payment is confirmed, our Telegram bot immediately delivers your official License Key and direct software access link.",
-                faq_q2: "Can I use the software on an Android phone or iPhone?",
-                faq_a2: "Yes! All tools run directly in modern mobile browsers (Chrome, Safari, Edge, etc.) on Android, iPhone, iPad, Laptop, or PC.",
-                faq_q3: "Can I switch browsers on the same device?",
-                faq_a3: "Absolutely. As long as you are using the same physical device, you can use any browser without needing reactivation.",
-                faq_q4: "How do I earn 30% commission with the affiliate program?",
-                faq_a4: "Open our Telegram bot, type register <your_name>, and share your dedicated Landing Page links. You automatically earn 30% for each successful purchase."
-            }
-        };
+        const BOT_USERNAME = 'AppDockHub_Bot';
 
-        function setLanguage(lang) {
-            localStorage.setItem('appdockhub_lang', lang);
-            document.documentElement.lang = lang;
+        function getActiveReferral() {
+            const params = new URLSearchParams(window.location.search);
+            let rawRef = params.get('ref') || params.get('r') || params.get('aff') || '';
+            rawRef = rawRef.replace(/^ref_/i, '').replace(/[^a-zA-Z0-9_-]/g, '').trim();
 
-            // Update active button state
-            const btnId = document.getElementById('lang-id');
-            const btnEn = document.getElementById('lang-en');
-            if (lang === 'id') {
-                btnId.className = "px-2.5 py-1.5 rounded-lg transition bg-brand-600 text-white shadow";
-                btnEn.className = "px-2.5 py-1.5 rounded-lg transition text-slate-400 hover:text-white";
-            } else {
-                btnEn.className = "px-2.5 py-1.5 rounded-lg transition bg-brand-600 text-white shadow";
-                btnId.className = "px-2.5 py-1.5 rounded-lg transition text-slate-400 hover:text-white";
+            if (rawRef && rawRef.toLowerCase() !== 'direct') {
+                try {
+                    localStorage.setItem('appdockhub_ref', rawRef);
+                    document.cookie = `aff_ref=${encodeURIComponent(rawRef)}; path=/; max-age=${60 * 60 * 24 * 90}; SameSite=Lax`;
+                } catch (_) {}
+                return rawRef;
             }
 
-            // Replace all text elements
-            const dict = translations[lang];
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (dict[key]) {
-                    el.innerText = dict[key];
-                }
-            });
+            try {
+                const stored = localStorage.getItem('appdockhub_ref');
+                if (stored && stored.toLowerCase() !== 'direct') return stored;
+            } catch (_) {}
+
+            const match = document.cookie.match(/(?:^|;\s*)aff_ref=([^;]*)/);
+            if (match && match[1]) {
+                const cVal = decodeURIComponent(match[1]).trim();
+                if (cVal && cVal.toLowerCase() !== 'direct') return cVal;
+            }
+
+            return 'direct';
         }
 
-        // Initialize preferred language (Default to Indonesian, or stored preference)
+        function applyReferralToPage(refCode) {
+            const cleanRef = (refCode && refCode.trim()) ? refCode.trim() : 'direct';
+
+            // Tampilkan badge jika ada kode referral aktif
+            if (cleanRef !== 'direct') {
+                const badge = document.getElementById('refBadgeTop');
+                const codeSpan = document.getElementById('refCodeDisplay');
+                if (badge && codeSpan) {
+                    codeSpan.textContent = cleanRef;
+                    badge.classList.remove('hidden');
+                }
+                const inputEl = document.getElementById('customRefInput');
+                if (inputEl && !inputEl.value) inputEl.value = cleanRef;
+            }
+
+            // Update semua link antar halaman produk agar membawa ?ref=
+            document.querySelectorAll('a[data-keep-ref="true"]').forEach(a => {
+                const baseHref = a.getAttribute('href').split('?')[0];
+                a.setAttribute('href', cleanRef !== 'direct' ? `${baseHref}?ref=${encodeURIComponent(cleanRef)}` : baseHref);
+            });
+
+            // Update semua tombol Beli Langsung per produk ke Bot Telegram sesuai referral
+            document.querySelectorAll('a[data-buy-product]').forEach(a => {
+                const prodKey = a.getAttribute('data-buy-product');
+                a.setAttribute('href', `https://t.me/${BOT_USERNAME}?start=buy_${prodKey}_ref_${encodeURIComponent(cleanRef)}`);
+            });
+
+            // Update tombol umum Bot Telegram & Play Store
+            const botGeneralUrl = `https://t.me/${BOT_USERNAME}?start=ref_${encodeURIComponent(cleanRef)}`;
+            ['navBotBtn', 'heroBotBtn', 'aiStudioBotBtn'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.setAttribute('href', botGeneralUrl);
+            });
+
+            const playBtn = document.getElementById('playStoreDirectBtn');
+            if (playBtn) {
+                playBtn.setAttribute('href', `https://appdockhub.com/play?ref=${encodeURIComponent(cleanRef)}`);
+            }
+        }
+
+        function goToProduct(pageFile) {
+            const ref = getActiveReferral();
+            const target = (ref && ref !== 'direct')
+                ? `${pageFile}?ref=${encodeURIComponent(ref)}`
+                : pageFile;
+            window.location.href = target;
+        }
+
+        function generateAllAffiliateLinks() {
+            const raw = document.getElementById('customRefInput').value.trim().replace(/^ref_/i, '').replace(/[^a-zA-Z0-9_-]/g, '');
+            if (!raw) {
+                alert('Silakan masukkan ID Telegram atau Kode Referral Anda terlebih dahulu!');
+                return;
+            }
+            try {
+                localStorage.setItem('appdockhub_ref', raw);
+            } catch (_) {}
+            applyReferralToPage(raw);
+
+            const baseOrigin = 'https://appdockhub.com';
+            const pages = [
+                { label: '🏠 Katalog Semua Produk (Utama)', url: `${baseOrigin}/?ref=${raw}`, comm: 'Semua Produk (Komisi 30%)' },
+                { label: '👑 Jualin Aja — Drama Studio', url: `${baseOrigin}/jualinaja.html?ref=${raw}`, comm: 'Komisi Rp 89.700 / closing' },
+                { label: '🔴 Reddit Manager Pro', url: `${baseOrigin}/redit.html?ref=${raw}`, comm: 'Komisi Rp 29.700 / closing' },
+                { label: '🔵 Facebook Manager Pro', url: `${baseOrigin}/facebook.html?ref=${raw}`, comm: 'Komisi Rp 29.700 / closing' },
+                { label: '📱 TikTok Multi-Screen Pro', url: `${baseOrigin}/tiktok.html?ref=${raw}`, comm: 'Komisi Rp 29.700 / closing' },
+                { label: '💼 LinkedIn Manager Pro', url: `${baseOrigin}/linkedin.html?ref=${raw}`, comm: 'Komisi Rp 29.700 / closing' },
+                { label: '📌 Pinterest Manager Pro', url: `${baseOrigin}/pinterest.html?ref=${raw}`, comm: 'Komisi Rp 29.700 / closing' },
+                { label: '🐦 X (Twitter) Manager Pro', url: `${baseOrigin}/x.html?ref=${raw}`, comm: 'Komisi Rp 29.700 / closing' },
+                { label: '🎮 Game Cyber Orbit (Play Store)', url: `${baseOrigin}/cyber-orbit.html?ref=${raw}`, comm: 'Bonus Level & Iklan' },
+                { label: '🤖 Direct Link Bot Telegram', url: `https://t.me/${BOT_USERNAME}?start=ref_${raw}`, comm: 'Auto-Lock Semua Produk' }
+            ];
+
+            const grid = document.getElementById('linksListGrid');
+            grid.innerHTML = pages.map((p, idx) => `
+                <div class="bg-slate-950 border border-slate-800 p-3.5 rounded-xl flex flex-col justify-between gap-2">
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-white text-xs">${p.label}</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">${p.comm}</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input id="affLink_${idx}" readonly value="${p.url}" class="w-full bg-slate-900 text-[11px] text-slate-300 px-3 py-2 rounded-lg border border-slate-800 focus:outline-none" />
+                        <button onclick="copyGeneratedLink('affLink_${idx}')" class="px-3 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs shrink-0">Salin</button>
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('generatedLinksContainer').classList.remove('hidden');
+        }
+
+        function copyGeneratedLink(inputId) {
+            const el = document.getElementById(inputId);
+            if (!el) return;
+            el.select();
+            navigator.clipboard.writeText(el.value);
+            alert('✅ Link berhasil disalin: ' + el.value);
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('appdockhub_lang') || 'id';
-            setLanguage(savedLang);
+            const activeRef = getActiveReferral();
+            applyReferralToPage(activeRef);
         });
     </script>
 </body>
