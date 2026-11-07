@@ -58,8 +58,8 @@
         </div>
     </div>
 
-    <!-- NAVBAR -->
-    <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#050811]/85 border-b border-slate-800/80">
+    <!-- NAVBAR + LIVE SOCIAL PROOF TICKER DI HEADER -->
+    <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#050811]/90 border-b border-slate-800/80 shadow-lg">
         <div class="max-w-7xl mx-auto px-6 h-18 py-4 flex items-center justify-between">
             <a href="index.html" data-keep-ref="true" class="flex items-center gap-3 group">
                 <div class="h-10 w-10 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-lg group-hover:border-amber-400 transition">
@@ -81,6 +81,18 @@
             <a href="https://t.me/AppDockHub_Bot?start=buy_reddit_pro_ref_direct" data-main-cta="true" target="_blank" class="px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 hover:opacity-95 text-white font-extrabold text-xs sm:text-sm shadow-lg transition">
                 ⚡ Beli Sekarang (Rp 99.000)
             </a>
+        </div>
+
+        <!-- LIVE SOCIAL PROOF BAR (TERJUAL & PENCAIRAN KOMISI AFFILIATE) -->
+        <div class="bg-gradient-to-r from-slate-950/95 via-indigo-950/80 to-slate-950/95 border-t border-slate-800/80 py-2 px-4 overflow-hidden">
+            <div class="max-w-7xl mx-auto flex items-center justify-center gap-2.5 text-xs">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 font-extrabold text-[10px] uppercase tracking-wider shrink-0" id="liveProofBadge">
+                    🛒 LISENSI TERJUAL
+                </span>
+                <div id="liveProofText" class="text-slate-200 font-medium text-center truncate transition-all duration-500 opacity-100">
+                    🔥 <strong class="text-amber-300">Dimas Aditya (Bandung)</strong> baru saja mengaktifkan lisensi resmi <strong class="text-white">Reddit Manager Pro (Rp 99.000)</strong> via QRIS BCA • <span class="text-emerald-400 font-bold">✓ Aktif Instan</span>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -626,7 +638,69 @@
                 const baseHref = a.getAttribute('href').split('?')[0];
                 a.setAttribute('href', ref !== 'direct' ? `${baseHref}?ref=${encodeURIComponent(ref)}` : baseHref);
             });
+
+            startProductLiveSocialProof();
         });
+
+        const SOCIAL_NAMES = [
+            'Rizky Pratama (Surabaya)', 'Dimas Aditya (Bandung)', 'Siti Rahmawati (Jakarta Selatan)', 'Budi Santoso (Medan)',
+            'Nadia Putri (Yogyakarta)', 'Hendra Wijaya (Semarang)', 'Fajar Nugroho (Malang)', 'Rina Amelia (Bekasi)',
+            'Agus Setiawan (Tangerang)', 'Dewi Lestari (Denpasar)', 'Wahyu Ramadhan (Makassar)', 'Gilang Saputra (Palembang)',
+            'Taufik Hidayat (Bogor)', 'Andika Putra (Pekanbaru)', 'Melisa Kusuma (Depok)', 'Arif Wibowo (Solo)',
+            'Reza Pahlevi (Balikpapan)', 'Kevin Sanjaya (Batam)', 'Bagas Kurniawan (Sidoarjo)', 'Fitriani Nur (Banjarmasin)',
+            'Yudha Pratama (Samarinda)', 'Putri Maharani (Padang)', 'Deni Hermawan (Bandar Lampung)', 'Bayu Kristanto (Cirebon)',
+            'Lestari Wulandari (Pontianak)', 'Ilham Akbar (Manado)', 'Surya Darma (Gresik)', 'Anisa Fitri (Purwokerto)',
+            'Chandra Wijaya (Kediri)', 'Farhan Maulana (Serang)', 'Vina Panduwinata (Sukabumi)', 'Eko Prasetyo (Madiun)',
+            'Diana Puspita (Karawang)', 'Rendy Kurnia (Tasikmalaya)', 'Lukman Hakim (Jember)', 'Mega Utami (Mataram)',
+            'Zaki Mubarak (Banda Aceh)', 'Aldi Taher (Cikarang)', 'Gita Savitri (Bintaro)', 'Dian Sastro (BSD City)',
+            'Antonius Wijaya (Kelapa Gading)', 'Rahmat Hidayat (Bukittinggi)', 'Siska Kohl (PIK Jakarta)', 'Naufal Azhar (Cimahi)',
+            'Intan Permata (Garut)', 'Danu Kusuma (Kudus)', 'Yoga Pratama (Magelang)', 'Tiara Andini (Jember)',
+            'Riko Simanjuntak (Medan)', 'Novita Sari (Lampung)', 'Irwan Fals (Cibinong)', 'Galih Ginanjar (Tegal)',
+            'Shinta Bella (Pekalongan)', 'Dicky Chandra (Sumedang)', 'Ferdy Hasan (Kemang)', 'Ayu Tingting (Depok)'
+        ];
+        const PAYOUT_BANKS = ['DANA', 'BCA', 'Mandiri', 'GoPay', 'BRI', 'BNI', 'OVO', 'ShopeePay', 'SeaBank'];
+        const PAYOUT_AMOUNTS = [
+            'Rp 89.700', 'Rp 149.100', 'Rp 179.400', 'Rp 269.100', 'Rp 358.800',
+            'Rp 448.500', 'Rp 538.200', 'Rp 627.900', 'Rp 717.600', 'Rp 897.000', 'Rp 1.255.800'
+        ];
+        const TIME_LABELS = ['Baru saja', '1 menit lalu', '2 menit lalu', '3 menit lalu', '4 menit lalu', '5 menit lalu'];
+
+        function startProductLiveSocialProof() {
+            const badgeEl = document.getElementById('liveProofBadge');
+            const textEl = document.getElementById('liveProofText');
+            if (!badgeEl || !textEl) return;
+
+            const currentProdName = 'Reddit Manager Pro';
+            const currentProdPrice = 'Rp 99.000';
+            const currentComm = 'Rp 29.700';
+
+            let step = 0;
+            setInterval(() => {
+                step++;
+                const person = SOCIAL_NAMES[(step * 7 + Math.floor(Math.random() * SOCIAL_NAMES.length)) % SOCIAL_NAMES.length];
+                const bank = PAYOUT_BANKS[(step * 5 + Math.floor(Math.random() * PAYOUT_BANKS.length)) % PAYOUT_BANKS.length];
+                const payoutAmt = PAYOUT_AMOUNTS[(step * 3 + Math.floor(Math.random() * PAYOUT_AMOUNTS.length)) % PAYOUT_AMOUNTS.length];
+                const timeStr = TIME_LABELS[step % TIME_LABELS.length];
+
+                textEl.style.opacity = '0';
+                setTimeout(() => {
+                    if (step % 3 === 1) {
+                        badgeEl.textContent = '🛒 LISENSI TERJUAL';
+                        badgeEl.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 font-extrabold text-[10px] uppercase tracking-wider shrink-0';
+                        textEl.innerHTML = `🔥 <strong class="text-amber-300">${person}</strong> baru saja membeli & mengaktifkan <strong class="text-white">${currentProdName} (${currentProdPrice})</strong> via QRIS ${bank} • <span class="text-emerald-400 font-bold">✓ Lisensi HWID Aktif (${timeStr})</span>`;
+                    } else if (step % 3 === 2) {
+                        badgeEl.textContent = '💸 KOMISI CAIR';
+                        badgeEl.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-extrabold text-[10px] uppercase tracking-wider shrink-0';
+                        textEl.innerHTML = `💸 <strong class="text-emerald-300">Pencairan Komisi Affiliate Berhasil!</strong> <strong class="text-white">${person}</strong> menerima transfer komisi <strong class="text-amber-300">${payoutAmt}</strong> ke <strong class="text-cyan-300">${bank}</strong> • <span class="text-emerald-400 font-bold">✓ LUNAS (${timeStr})</span>`;
+                    } else {
+                        badgeEl.textContent = '⚡ KOMISI MASUK';
+                        badgeEl.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 font-extrabold text-[10px] uppercase tracking-wider shrink-0';
+                        textEl.innerHTML = `💰 <strong class="text-cyan-300">Komisi Afiliasi Masuk!</strong> <strong class="text-white">${person}</strong> meraih komisi langsung <strong class="text-emerald-300">+${currentComm}</strong> dari penjualan <strong class="text-amber-300">${currentProdName}</strong> • <span class="text-slate-400">(${timeStr})</span>`;
+                    }
+                    textEl.style.opacity = '1';
+                }, 260);
+            }, 4200);
+        }
     </script>
 </body>
 </html>

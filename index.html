@@ -81,8 +81,8 @@
         </div>
     </div>
 
-    <!-- NAVBAR -->
-    <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#060913]/85 border-b border-slate-800/80">
+    <!-- NAVBAR + LIVE SOCIAL PROOF TICKER DI HEADER -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#060913]/90 border-b border-slate-800/80 shadow-lg">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="index.html" data-keep-ref="true" class="flex items-center gap-3 group">
                 <div class="h-11 w-11 rounded-2xl bg-gradient-to-tr from-brand-600 via-indigo-500 to-brand-accent flex items-center justify-center shadow-lg shadow-brand-500/25 font-black text-xl text-white group-hover:scale-105 transition">
@@ -106,6 +106,19 @@
                 <a id="navBotBtn" href="https://t.me/AppDockHub_Bot?start=ref_direct" target="_blank" class="px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-cyan-600 hover:from-brand-500 hover:to-cyan-500 text-white text-xs sm:text-sm font-extrabold shadow-lg shadow-brand-500/25 transition transform hover:-translate-y-0.5 flex items-center gap-2">
                     <span>🤖</span> <span>Buka Bot Telegram</span>
                 </a>
+            </div>
+        </div>
+
+        <!-- LIVE SOCIAL PROOF BAR (TERJUAL & PENCAIRAN KOMISI AFFILIATE) -->
+        <div class="bg-gradient-to-r from-slate-950/95 via-indigo-950/80 to-slate-950/95 border-t border-slate-800/80 py-2 px-4 overflow-hidden">
+            <div class="max-w-7xl mx-auto flex items-center justify-center gap-2.5 text-xs">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-extrabold text-[10px] uppercase tracking-wider shrink-0">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span id="liveProofBadge">LIVE TRANSAKSI</span>
+                </span>
+                <div id="liveProofText" class="text-slate-200 font-medium text-center truncate transition-all duration-500 opacity-100">
+                    🔥 <strong class="text-amber-300">Rizky Pratama (Surabaya)</strong> baru saja mengaktifkan lisensi resmi <strong class="text-white">Jualin Aja — Drama Studio (Rp 299.000)</strong> via QRIS BCA • <span class="text-emerald-400 font-bold">✓ Aktif Instan</span>
+                </div>
             </div>
         </div>
     </header>
@@ -827,9 +840,84 @@
             alert('✅ Link berhasil disalin: ' + el.value);
         }
 
+        // =====================================================================
+        // LIVE SOCIAL PROOF TICKER (PENJUALAN PRODUK & PENCAIRAN KOMISI LOOPING)
+        // =====================================================================
+        const SOCIAL_NAMES = [
+            'Rizky Pratama (Surabaya)', 'Dimas Aditya (Bandung)', 'Siti Rahmawati (Jakarta Selatan)', 'Budi Santoso (Medan)',
+            'Nadia Putri (Yogyakarta)', 'Hendra Wijaya (Semarang)', 'Fajar Nugroho (Malang)', 'Rina Amelia (Bekasi)',
+            'Agus Setiawan (Tangerang)', 'Dewi Lestari (Denpasar)', 'Wahyu Ramadhan (Makassar)', 'Gilang Saputra (Palembang)',
+            'Taufik Hidayat (Bogor)', 'Andika Putra (Pekanbaru)', 'Melisa Kusuma (Depok)', 'Arif Wibowo (Solo)',
+            'Reza Pahlevi (Balikpapan)', 'Kevin Sanjaya (Batam)', 'Bagas Kurniawan (Sidoarjo)', 'Fitriani Nur (Banjarmasin)',
+            'Yudha Pratama (Samarinda)', 'Putri Maharani (Padang)', 'Deni Hermawan (Bandar Lampung)', 'Bayu Kristanto (Cirebon)',
+            'Lestari Wulandari (Pontianak)', 'Ilham Akbar (Manado)', 'Surya Darma (Gresik)', 'Anisa Fitri (Purwokerto)',
+            'Chandra Wijaya (Kediri)', 'Farhan Maulana (Serang)', 'Vina Panduwinata (Sukabumi)', 'Eko Prasetyo (Madiun)',
+            'Diana Puspita (Karawang)', 'Rendy Kurnia (Tasikmalaya)', ' Lukman Hakim (Jember)', 'Mega Utami (Mataram)',
+            'Zaki Mubarak (Banda Aceh)', 'Aldi Taher (Cikarang)', 'Gita Savitri (Bintaro)', 'Dian Sastro (BSD City)',
+            'Antonius Wijaya (Kelapa Gading)', 'Rahmat Hidayat (Bukittinggi)', 'Siska Kohl (Pantai Indah Kapuk)', 'Naufal Azhar (Cimahi)',
+            'intan Permata (Garut)', 'Danu Kusuma (Kudus)', 'Yoga Pratama (Magelang)', 'Tiara Andini (Jember)',
+            'Riko Simanjuntak (Pematangsiantar)', 'Novita Sari (Metro Lampung)', 'Irwan Fals (Cibinong)', 'galih Ginanjar (Tegal)',
+            'Shinta Bella (Pekalongan)', 'Dicky Chandra (Sumedang)', 'ferdy Hasan (Kemang)', 'Ayu Tingting (Depok)'
+        ];
+
+        const SOCIAL_PRODUCTS = [
+            { name: 'Jualin Aja — Drama Studio & AI Suite', price: 'Rp 299.000', comm: 'Rp 89.700' },
+            { name: 'Reddit Manager Pro', price: 'Rp 99.000', comm: 'Rp 29.700' },
+            { name: 'Facebook Account Manager Pro', price: 'Rp 99.000', comm: 'Rp 29.700' },
+            { name: 'TikTok Multi-Screen Pro (LiveTok)', price: 'Rp 99.000', comm: 'Rp 29.700' },
+            { name: 'LinkedIn Manager Pro', price: 'Rp 99.000', comm: 'Rp 29.700' },
+            { name: 'Pinterest Manager Pro', price: 'Rp 99.000', comm: 'Rp 29.700' },
+            { name: 'X (Twitter) Manager Pro', price: 'Rp 99.000', comm: 'Rp 29.700' }
+        ];
+
+        const PAYOUT_BANKS = ['DANA', 'BCA', 'Mandiri', 'GoPay', 'BRI', 'BNI', 'OVO', 'ShopeePay', 'SeaBank'];
+        const PAYOUT_AMOUNTS = [
+            'Rp 89.700', 'Rp 149.100', 'Rp 179.400', 'Rp 269.100', 'Rp 358.800',
+            'Rp 448.500', 'Rp 538.200', 'Rp 627.900', 'Rp 717.600', 'Rp 897.000', 'Rp 1.255.800'
+        ];
+        const TIME_LABELS = ['Baru saja', '1 menit lalu', '2 menit lalu', '3 menit lalu', '4 menit lalu', '5 menit lalu'];
+
+        function startLiveSocialProofTicker() {
+            const badgeEl = document.getElementById('liveProofBadge');
+            const textEl = document.getElementById('liveProofText');
+            if (!badgeEl || !textEl) return;
+
+            let step = 0;
+            setInterval(() => {
+                step++;
+                const person = SOCIAL_NAMES[(step * 7 + Math.floor(Math.random() * SOCIAL_NAMES.length)) % SOCIAL_NAMES.length];
+                const prod = SOCIAL_PRODUCTS[(step * 3 + Math.floor(Math.random() * SOCIAL_PRODUCTS.length)) % SOCIAL_PRODUCTS.length];
+                const bank = PAYOUT_BANKS[(step * 5 + Math.floor(Math.random() * PAYOUT_BANKS.length)) % PAYOUT_BANKS.length];
+                const payoutAmt = PAYOUT_AMOUNTS[(step * 2 + Math.floor(Math.random() * PAYOUT_AMOUNTS.length)) % PAYOUT_AMOUNTS.length];
+                const timeStr = TIME_LABELS[step % TIME_LABELS.length];
+
+                textEl.style.opacity = '0';
+                setTimeout(() => {
+                    if (step % 3 === 1) {
+                        // Notifikasi Penjualan Produk
+                        badgeEl.textContent = '🛒 LISENSI TERJUAL';
+                        badgeEl.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 font-extrabold text-[10px] uppercase tracking-wider shrink-0';
+                        textEl.innerHTML = `🔥 <strong class="text-amber-300">${person}</strong> baru saja membeli & mengaktifkan <strong class="text-white">${prod.name} (${prod.price})</strong> via QRIS ${bank} • <span class="text-emerald-400 font-bold">✓ Lisensi HWID Aktif (${timeStr})</span>`;
+                    } else if (step % 3 === 2) {
+                        // Notifikasi Pencairan Komisi Affiliate Berhasil
+                        badgeEl.textContent = '💸 KOMISI CAIR';
+                        badgeEl.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-extrabold text-[10px] uppercase tracking-wider shrink-0';
+                        textEl.innerHTML = `💸 <strong class="text-emerald-300">Pencairan Komisi Affiliate Berhasil!</strong> <strong class="text-white">${person}</strong> telah menerima transfer komisi <strong class="text-amber-300">${payoutAmt}</strong> ke rekening <strong class="text-cyan-300">${bank}</strong> • <span class="text-emerald-400 font-bold">✓ LUNAS (${timeStr})</span>`;
+                    } else {
+                        // Notifikasi Komisi Real-Time Masuk ke Saldo
+                        badgeEl.textContent = '⚡ KOMISI MASUK';
+                        badgeEl.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 font-extrabold text-[10px] uppercase tracking-wider shrink-0';
+                        textEl.innerHTML = `💰 <strong class="text-cyan-300">Komisi 30% Masuk!</strong> <strong class="text-white">${person}</strong> baru saja meraih komisi langsung <strong class="text-emerald-300">+${prod.comm}</strong> dari penjualan <strong class="text-amber-300">${prod.name}</strong> • <span class="text-slate-400">(${timeStr})</span>`;
+                    }
+                    textEl.style.opacity = '1';
+                }, 260);
+            }, 4200);
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const activeRef = getActiveReferral();
             applyReferralToPage(activeRef);
+            startLiveSocialProofTicker();
         });
     </script>
 </body>
