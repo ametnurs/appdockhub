@@ -184,6 +184,106 @@
         </div>
     </section>
 
+    <!-- ================================================================= -->
+    <!-- 🎬 OFFICIAL VIDEO SHOWCASE & DEMO (5 SCENE RESMI REDDIT MANAGER) -->
+    <!-- ================================================================= -->
+    <section id="video-demo" class="py-16 md:py-24 relative overflow-hidden bg-slate-950/90 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/15 border border-orange-500/50 text-orange-400 text-xs font-extrabold uppercase tracking-wider mb-4">
+                    <span>🎬 OFFICIAL VIDEO SHOWCASE</span>
+                    <span>•</span>
+                    <span>Tonton Langsung Bukti & Cara Kerja Reddit Manager Pro</span>
+                </div>
+                <h2 class="text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                    Lihat Cuplikan 5 Scene: Dari Akun Banned Sampai Panen Trafik Global!
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-3 leading-relaxed">
+                    Klik tab scene 1 sampai 5 di bawah ini untuk menyaksikan secara langsung demo multi-screen 1 layar, riset subreddit pembeli berdaya beli dolar, auto-warmup karma, hingga otomatisasi posting 24 jam nonstop.
+                </p>
+            </div>
+
+            <!-- TAB SELECTOR -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8" id="videoTabs">
+                <button type="button" onclick="switchVideoScene(1)" id="btnScene1" class="scene-tab-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-lg shadow-orange-500/25">
+                    <span>🎬 Scene 1</span>
+                    <span>Intro & Masalah Trafik US</span>
+                </button>
+                <button type="button" onclick="switchVideoScene(2)" id="btnScene2" class="scene-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 hover:border-orange-400">
+                    <span>🖥️ Scene 2</span>
+                    <span>Multi-Screen 1 Layar</span>
+                </button>
+                <button type="button" onclick="switchVideoScene(3)" id="btnScene3" class="scene-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 hover:border-orange-400">
+                    <span>🔥 Scene 3</span>
+                    <span>Subreddit & Karma</span>
+                </button>
+                <button type="button" onclick="switchVideoScene(4)" id="btnScene4" class="scene-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 hover:border-orange-400">
+                    <span>⚡ Scene 4</span>
+                    <span>Otomasi Posting 24J</span>
+                </button>
+                <button type="button" onclick="switchVideoScene(5)" id="btnScene5" class="scene-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 hover:border-orange-400">
+                    <span>💰 Scene 5</span>
+                    <span>Banjir Dolar & Komisi 30%</span>
+                </button>
+            </div>
+
+            <!-- MAIN VIDEO PLAYER CONTAINER -->
+            <div class="max-w-4xl mx-auto bg-slate-900/95 border-2 border-orange-500/50 rounded-3xl p-4 sm:p-6 shadow-2xl relative">
+                <div class="aspect-video w-full rounded-2xl overflow-hidden bg-black relative shadow-inner">
+                    <video id="mainVideoPlayer" class="w-full h-full object-contain" controls playsinline preload="metadata">
+                        <source id="videoSource" src="assets/videos/reddit-scene1-intro.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutar video HTML5.
+                    </video>
+                </div>
+
+                <!-- SCENE INFO & CTA -->
+                <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-800">
+                    <div class="text-center sm:text-left">
+                        <span id="sceneBadge" class="inline-block px-2.5 py-0.5 rounded-full bg-orange-500/20 text-orange-300 text-xs font-bold uppercase mb-1">Scene 1 / 5: Intro & Masalah Trafik US</span>
+                        <h3 id="sceneTitle" class="text-base sm:text-lg font-black text-white">Scene 1: Sulit Mendapatkan Trafik Pembeli US & Takut Kena Shadowban Reddit?</h3>
+                        <p id="sceneDesc" class="text-xs sm:text-sm text-slate-400 mt-1 max-w-xl">
+                            Ingin jangkau pembeli berdaya beli dolar dari Amerika dan Eropa tapi akun sering kena ban atau postingan dihapus moderator? Simak solusi cerdas Reddit Manager Pro!
+                        </p>
+                    </div>
+                    <div class="shrink-0 w-full sm:w-auto">
+                        <a href="https://t.me/AppDockHub_Bot?start=buy_reddit_pro_ref_direct" data-main-cta="true" target="_blank" class="block w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 hover:opacity-95 text-slate-950 font-black text-sm text-center transition shadow-lg">
+                            Miliki Lisensi Sekarang (Rp 99.000) 👉
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 SCENES PREVIEW CARDS -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 mt-8 max-w-4xl mx-auto">
+                <div onclick="switchVideoScene(1)" class="cursor-pointer group p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-orange-500 transition text-center">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-orange-500/15 text-orange-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">🎬</div>
+                    <div class="text-xs font-bold text-white">Scene 1: Intro</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Problem Trafik Bule</div>
+                </div>
+                <div onclick="switchVideoScene(2)" class="cursor-pointer group p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-orange-500 transition text-center">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-red-500/15 text-red-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">🖥️</div>
+                    <div class="text-xs font-bold text-white">Scene 2: Multi-Screen</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">50+ Akun Terisolasi</div>
+                </div>
+                <div onclick="switchVideoScene(3)" class="cursor-pointer group p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-orange-500 transition text-center">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">🔥</div>
+                    <div class="text-xs font-bold text-white">Scene 3: Subreddit</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Auto Karma & Target</div>
+                </div>
+                <div onclick="switchVideoScene(4)" class="cursor-pointer group p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-orange-500 transition text-center">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">⚡</div>
+                    <div class="text-xs font-bold text-white">Scene 4: Otomasi</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Posting 24J Nonstop</div>
+                </div>
+                <div onclick="switchVideoScene(5)" class="cursor-pointer group p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-orange-500 transition text-center">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-pink-500/15 text-pink-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">💰</div>
+                    <div class="text-xs font-bold text-white">Scene 5: Banjir Cuan</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Buyer Dolar & Komisi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- PAIN POINTS VS SOLUTION -->
     <section id="masalah-solusi" class="py-20 bg-[#090f1e]/90 border-y border-slate-800/80">
         <div class="max-w-6xl mx-auto px-6">
@@ -639,8 +739,74 @@
                 a.setAttribute('href', ref !== 'direct' ? `${baseHref}?ref=${encodeURIComponent(ref)}` : baseHref);
             });
 
-            startProductLiveSocialProof();
+                    startProductLiveSocialProof();
         });
+
+        // ==========================================
+        // DYNAMIC 5-SCENE VIDEO SHOWCASE SWITCHER
+        // ==========================================
+        const VIDEO_SCENES = {
+            1: {
+                src: 'assets/videos/reddit-scene1-intro.mp4',
+                badge: 'Scene 1 / 5: Intro & Masalah Trafik US',
+                title: 'Scene 1: Sulit Mendapatkan Trafik Pembeli US & Takut Kena Shadowban Reddit?',
+                desc: 'Ingin jangkau pembeli berdaya beli dolar dari Amerika dan Eropa tapi akun sering kena ban atau postingan dihapus moderator? Simak solusi cerdas Reddit Manager Pro!'
+            },
+            2: {
+                src: 'assets/videos/reddit-scene2-multiscreen.mp4',
+                badge: 'Scene 2 / 5: Multi-Screen 1 Layar',
+                title: 'Scene 2: Multi-Screen Profile Isolation & Anti-Detect Fingerprint',
+                desc: 'Buka dan kelola puluhan akun Reddit sekaligus di 1 layar laptop. Tiap profil memiliki fingerprint, cookie, dan IP terisolasi tanpa risiko silang deteksi.'
+            },
+            3: {
+                src: 'assets/videos/reddit-scene3-subreddit.mp4',
+                badge: 'Scene 3 / 5: Riset Subreddit & Karma',
+                title: 'Scene 3: Auto-Warmup Karma & Subreddit Targeted Scanner',
+                desc: 'Tingkatkan karma akun secara otomatis lewat interaksi human-like. Temukan subreddit dengan ratusan ribu member aktif yang haus akan produk Anda.'
+            },
+            4: {
+                src: 'assets/videos/reddit-scene4-automation.mp4',
+                badge: 'Scene 4 / 5: Otomasi Posting 24J',
+                title: 'Scene 4: Auto-Post, Auto-Comment & Penjadwalan 24 Jam Nonstop',
+                desc: 'Jadwalkan postingan teks, gambar, dan link diskusi yang menyisipkan link promosi secara halus dan natural. Software bekerja otomatis saat jam ramai di Amerika.'
+            },
+            5: {
+                src: 'assets/videos/reddit-scene5-earning.mp4',
+                badge: 'Scene 5 / 5: Panen Cuan & Komisi 30%',
+                title: 'Scene 5: Banjir Trafik Global + Komisi 30% Kemitraan Afiliasi Bot',
+                desc: 'Nikmati aliran orderan produk digital & affiliate global, ditambah komisi 30% (Rp 29.700 per lisensi) setiap kali ada rekan bisnis Anda yang membeli lisensi ini.'
+            }
+        };
+
+        function switchVideoScene(sceneNum) {
+            const sc = VIDEO_SCENES[sceneNum];
+            if (!sc) return;
+
+            const player = document.getElementById('mainVideoPlayer');
+            const source = document.getElementById('videoSource');
+            const title = document.getElementById('sceneTitle');
+            const desc = document.getElementById('sceneDesc');
+            const badge = document.getElementById('sceneBadge');
+
+            if (source && player) {
+                source.src = sc.src;
+                player.load();
+                player.play().catch(() => {});
+            }
+            if (title) title.textContent = sc.title;
+            if (desc) desc.textContent = sc.desc;
+            if (badge) badge.textContent = sc.badge;
+
+            for (let i = 1; i <= 5; i++) {
+                const btn = document.getElementById('btnScene' + i);
+                if (!btn) continue;
+                if (i === sceneNum) {
+                    btn.className = 'scene-tab-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-lg shadow-orange-500/25';
+                } else {
+                    btn.className = 'scene-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 hover:border-orange-400';
+                }
+            }
+        }
 
         const SOCIAL_NAMES = [
             'Rizky Pratama (Surabaya)', 'Dimas Aditya (Bandung)', 'Siti Rahmawati (Jakarta Selatan)', 'Budi Santoso (Medan)',
