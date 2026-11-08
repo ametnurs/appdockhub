@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
     <!-- Monetization Meta -->
@@ -61,7 +61,7 @@
     <!-- NAVBAR + LIVE SOCIAL PROOF TICKER DI HEADER -->
     <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#050811]/90 border-b border-slate-800/80 shadow-lg">
         <div class="max-w-7xl mx-auto px-6 h-18 py-4 flex items-center justify-between">
-            <a href="../index.html" data-keep-ref="true" class="flex items-center gap-3 group">
+            <a href="index.html" data-keep-ref="true" class="flex items-center gap-3 group">
                 <div class="h-10 w-10 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-lg group-hover:border-amber-400 transition">
                     ←
                 </div>
@@ -179,6 +179,103 @@
                         <div class="text-lg sm:text-xl font-black text-amber-400 mt-1">100% FFmpeg Anti-Fingerprint</div>
                     </div>
                     
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 🎬 OFFICIAL VIDEO SHOWCASE & DEMO (5 SCENE RESMI JUALIN AJA) -->
+    <!-- ================================================================= -->
+    <section id="video-demo" class="py-16 md:py-24 relative overflow-hidden bg-slate-950/90 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-500/15 border border-rose-500/50 text-rose-400 text-xs font-extrabold uppercase tracking-wider mb-4">
+                    <span>🎬 OFFICIAL VIDEO SHOWCASE</span>
+                    <span>Tonton Langsung Bukti & Cara Kerja Software Jualin Aja</span>
+                </div>
+                <h2 class="text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                    Lihat Cuplikan 5 Scene: Dari Rahasia Viral Sampai Panen Cuan!
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-3 leading-relaxed">
+                    Klik tab scene 1 sampai 5 di bawah ini untuk menyaksikan secara langsung demo fitur, kecanggihan AI Creator, bypass klaim hak cipta FFmpeg, hingga bukti omzet jutaan rupiah.
+                </p>
+            </div>
+
+            <!-- TAB SELECTOR -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8" id="videoTabs">
+                <button type="button" onclick="switchVideoScene(1)" id="btnScene1" class="scene-tab-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 shadow-lg">
+                    <span>🎬 Scene 1</span>
+                    <span>Intro & Masalah Kreator</span>
+                </button>
+                <button type="button" onclick="switchVideoScene(2)" id="btnScene2" class="scene-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 hover:border-amber-400">
+                    <span>🤖 Scene 2</span>
+                    <span>AI Talent & Studio</span>
+                </button>
+                <button type="button" onclick="switchVideoScene(3)" id="btnScene3" class="scene-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 hover:border-amber-400">
+                    <span>🎭 Scene 3</span>
+                    <span>Unlock Drama Viral</span>
+                </button>
+                <button type="button" onclick="switchVideoScene(4)" id="btnScene4" class="scene-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 hover:border-amber-400">
+                    <span>⚡ Scene 4</span>
+                    <span>FFmpeg Anti-Copyright</span>
+                </button>
+                <button type="button" onclick="switchVideoScene(5)" id="btnScene5" class="scene-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 hover:border-amber-400">
+                    <span>💰 Scene 5</span>
+                    <span>Bukti Earning & Cuan</span>
+                </button>
+            </div>
+
+            <!-- MAIN VIDEO PLAYER CONTAINER -->
+            <div class="max-w-4xl mx-auto bg-slate-900/95 border-2 border-amber-500/50 rounded-3xl p-4 sm:p-6 shadow-2xl relative">
+                <div class="aspect-video w-full rounded-2xl overflow-hidden bg-black relative shadow-inner">
+                    <video id="mainVideoPlayer" class="w-full h-full object-contain" controls playsinline preload="metadata">
+                        <source id="videoSource" src="assets/videos/jualinaja-scene1-intro.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutar video HTML5.
+                    </video>
+                </div>
+
+                <!-- SCENE INFO & CTA -->
+                <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-800">
+                    <div class="text-center sm:text-left">
+                        <span id="sceneBadge" class="inline-block px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase mb-1">Scene 1 / 5</span>
+                        <h3 id="sceneTitle" class="text-base sm:text-lg font-black text-white">Scene 1: Pengenalan & Masalah Umum Kreator Video</h3>
+                        <p id="sceneDesc" class="text-xs sm:text-sm text-slate-400 mt-1 max-w-xl">
+                            Mengapa banyak kreator terkena klaim hak cipta dan sepi views saat upload video drama mentah, serta bagaimana Jualin Aja mengubahnya.
+                        </p>
+                    </div>
+                    <a href="https://t.me/AppDockHub_Bot?start=buy_soft_a_ref_direct" data-main-cta="true" target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 hover:opacity-95 text-slate-950 font-black text-xs sm:text-sm text-center shadow-lg transition whitespace-nowrap">
+                        🚀 Ambil Lisensi Jualin Aja Sekarang (Rp 299rb)
+                    </a>
+                </div>
+            </div>
+
+            <!-- 5 SCENE THUMBNAIL CARDS GRID -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mt-8 max-w-5xl mx-auto">
+                <div onclick="switchVideoScene(1)" class="cursor-pointer group p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-amber-500 transition text-center">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">🎬</div>
+                    <div class="text-xs font-bold text-white">Scene 1: Intro</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Problem & Hook</div>
+                </div>
+                <div onclick="switchVideoScene(2)" class="cursor-pointer group p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-amber-500 transition text-center">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-indigo-500/15 text-indigo-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">🤖</div>
+                    <div class="text-xs font-bold text-white">Scene 2: Talent</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">AI Creator Studio</div>
+                </div>
+                <div onclick="switchVideoScene(3)" class="cursor-pointer group p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-amber-500 transition text-center">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-rose-500/15 text-rose-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">🎭</div>
+                    <div class="text-xs font-bold text-white">Scene 3: Drama</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Unlock Full Episode</div>
+                </div>
+                <div onclick="switchVideoScene(4)" class="cursor-pointer group p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-amber-500 transition text-center">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">⚡</div>
+                    <div class="text-xs font-bold text-white">Scene 4: FFmpeg</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Anti-Copyright Safe</div>
+                </div>
+                <div onclick="switchVideoScene(5)" class="cursor-pointer group p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-amber-500 transition text-center">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">💰</div>
+                    <div class="text-xs font-bold text-white">Scene 5: Earning</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Potensi Cuan 30%</div>
                 </div>
             </div>
         </div>
@@ -506,11 +603,11 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col sm:flex-row items-center justify-between mb-8 gap-4">
                 <h2 class="text-2xl font-black text-white">Jelajahi Produk AppDockHub Lainnya:</h2>
-                <a href="../index.html" data-keep-ref="true" class="text-xs font-extrabold text-cyan-400 hover:underline">Lihat Semua 8 Produk di Katalog Utama →</a>
+                <a href="index.html" data-keep-ref="true" class="text-xs font-extrabold text-cyan-400 hover:underline">Lihat Semua 8 Produk di Katalog Utama →</a>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 
-                <a href="../redit.html" data-keep-ref="true" class="p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-600 transition flex flex-col justify-between">
+                <a href="redit.html" data-keep-ref="true" class="p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-600 transition flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-2">
                             <span class="text-2xl">🔴</span>
@@ -521,7 +618,7 @@
                     <span class="text-[11px] text-cyan-400 font-bold mt-3 block">Buka Halaman Promo →</span>
                 </a>
                 
-                <a href="../facebook.html" data-keep-ref="true" class="p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-600 transition flex flex-col justify-between">
+                <a href="facebook.html" data-keep-ref="true" class="p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-600 transition flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-2">
                             <span class="text-2xl">🔵</span>
@@ -532,7 +629,7 @@
                     <span class="text-[11px] text-cyan-400 font-bold mt-3 block">Buka Halaman Promo →</span>
                 </a>
                 
-                <a href="../tiktok.html" data-keep-ref="true" class="p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-600 transition flex flex-col justify-between">
+                <a href="tiktok.html" data-keep-ref="true" class="p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-600 transition flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-2">
                             <span class="text-2xl">📱</span>
@@ -543,7 +640,7 @@
                     <span class="text-[11px] text-cyan-400 font-bold mt-3 block">Buka Halaman Promo →</span>
                 </a>
                 
-                <a href="../linkedin.html" data-keep-ref="true" class="p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-600 transition flex flex-col justify-between">
+                <a href="linkedin.html" data-keep-ref="true" class="p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-600 transition flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-2">
                             <span class="text-2xl">💼</span>
@@ -584,6 +681,69 @@
         const BOT_USERNAME = 'AppDockHub_Bot';
         const PRODUCT_KEY = 'soft_a';
         const IS_GAME = false;
+
+        // Video Showcase Switcher
+        const VIDEO_SCENES = {
+            1: {
+                src: 'assets/videos/jualinaja-scene1-intro.mp4',
+                badge: 'Scene 1 / 5',
+                title: 'Scene 1: Pengenalan & Masalah Umum Kreator Video',
+                desc: 'Mengapa banyak kreator terkena klaim hak cipta dan 0 views saat upload video mentah, serta bagaimana Jualin Aja mengatasinya.'
+            },
+            2: {
+                src: 'assets/videos/jualinaja-scene2-talent.mp4',
+                badge: 'Scene 2 / 5',
+                title: 'Scene 2: Solusi AI Talent & Affiliate Video Studio',
+                desc: 'Menampilkan kecanggihan AI Creator Studio yang membantu produksi konten video pendek secara otomatis dan profesional.'
+            },
+            3: {
+                src: 'assets/videos/jualinaja-scene3-drama.mp4',
+                badge: 'Scene 3 / 5',
+                title: 'Scene 3: Akses Full Episode DramaBox, Melolo & FlickReels',
+                desc: 'Buka seluruh episode drama pendek viral dari episode 1 sampai tamat tanpa bayar koin recehan per episode lagi!'
+            },
+            4: {
+                src: 'assets/videos/jualinaja-scene4-speech.mp4',
+                badge: 'Scene 4 / 5',
+                title: 'Scene 4: Engine FFmpeg Anti-Fingerprint & Auto Batch Merge',
+                desc: 'Proses otomatis penggabungan puluhan klip menjadi 1 film marathon utuh dengan filter anti-klaim hak cipta siap upload.'
+            },
+            5: {
+                src: 'assets/videos/jualinaja-scene5-earning.mp4',
+                badge: 'Scene 5 / 5',
+                title: 'Scene 5: Potensi Cuan Jutaan Rupiah & Komisi Afiliasi 30%',
+                desc: 'Bagaimana kreator menghasilkan jutaan dari AdSense YouTube/FB Pro dan komisi afiliasi Rp 89.700 per lisensi terjual.'
+            }
+        };
+
+        function switchVideoScene(sceneNum) {
+            const sc = VIDEO_SCENES[sceneNum];
+            if (!sc) return;
+            const player = document.getElementById('mainVideoPlayer');
+            const source = document.getElementById('videoSource');
+            const title = document.getElementById('sceneTitle');
+            const desc = document.getElementById('sceneDesc');
+            const badge = document.getElementById('sceneBadge');
+
+            if (source && player) {
+                source.setAttribute('src', sc.src);
+                player.load();
+                player.play().catch(() => {});
+            }
+            if (title) title.textContent = sc.title;
+            if (desc) desc.textContent = sc.desc;
+            if (badge) badge.textContent = sc.badge;
+
+            for (let i = 1; i <= 5; i++) {
+                const btn = document.getElementById(`btnScene${i}`);
+                if (!btn) continue;
+                if (i === sceneNum) {
+                    btn.className = 'scene-tab-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 shadow-lg';
+                } else {
+                    btn.className = 'scene-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 hover:border-amber-400';
+                }
+            }
+        }
 
         function getActiveReferral() {
             const params = new URLSearchParams(window.location.search);
