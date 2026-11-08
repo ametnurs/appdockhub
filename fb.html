@@ -184,7 +184,105 @@
         </div>
     </section>
 
-    <!-- PAIN POINTS VS SOLUTION -->
+    
+    <!-- ================================================================= -->
+    <!-- 🎬 OFFICIAL VIDEO SHOWCASE & DEMO (5 SCENE RESMI FACEBOOK MANAGER) -->
+    <!-- ================================================================= -->
+    <section id="video-demo" class="py-16 md:py-24 relative overflow-hidden bg-slate-950/90 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/15 border border-blue-500/50 text-blue-400 text-xs font-extrabold uppercase tracking-wider mb-4">
+                    <span>🎬 OFFICIAL VIDEO SHOWCASE</span>
+                    <span>Tonton Langsung Bukti & Cara Kerja FB Manager Pro</span>
+                </div>
+                <h2 class="text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                    Lihat Cuplikan 5 Scene: Dari Ternak Akun Sampai Banjir Closing!
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-3 leading-relaxed">
+                    Klik tab scene 1 sampai 5 di bawah ini untuk menyaksikan secara langsung demo multi-screen, sebar postingan otomatis ke marketplace & grup, perlindungan anti-checkpoint, hingga bukti cuan puluhan juta.
+                </p>
+            </div>
+
+            <!-- TAB SELECTOR -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8" id="videoTabs">
+                <button type="button" onclick="switchVideoScene(1)" id="btnScene1" class="scene-tab-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg">
+                    <span>🎬 Scene 1</span>
+                    <span>Intro & Masalah Akun FB</span>
+                </button>
+                <button type="button" onclick="switchVideoScene(2)" id="btnScene2" class="scene-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 hover:border-blue-400">
+                    <span>🖥️ Scene 2</span>
+                    <span>Multi-Screen & Anti-Detect</span>
+                </button>
+                <button type="button" onclick="switchVideoScene(3)" id="btnScene3" class="scene-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 hover:border-blue-400">
+                    <span>🛒 Scene 3</span>
+                    <span>Auto Post Marketplace</span>
+                </button>
+                <button type="button" onclick="switchVideoScene(4)" id="btnScene4" class="scene-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 hover:border-blue-400">
+                    <span>⚡ Scene 4</span>
+                    <span>Otomatisasi & Warmup</span>
+                </button>
+                <button type="button" onclick="switchVideoScene(5)" id="btnScene5" class="scene-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 hover:border-blue-400">
+                    <span>💰 Scene 5</span>
+                    <span>Bukti Earning & Cuan</span>
+                </button>
+            </div>
+
+            <!-- MAIN VIDEO PLAYER CONTAINER -->
+            <div class="max-w-4xl mx-auto bg-slate-900/95 border-2 border-blue-500/50 rounded-3xl p-4 sm:p-6 shadow-2xl relative">
+                <div class="aspect-video w-full rounded-2xl overflow-hidden bg-black relative shadow-inner">
+                    <video id="mainVideoPlayer" class="w-full h-full object-contain" controls playsinline preload="metadata">
+                        <source id="videoSource" src="assets/videos/fbmanager-scene1-intro.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutar video HTML5.
+                    </video>
+                </div>
+
+                <!-- SCENE INFO & CTA -->
+                <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-800">
+                    <div class="text-center sm:text-left">
+                        <span id="sceneBadge" class="inline-block px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold uppercase mb-1">Scene 1 / 5</span>
+                        <h3 id="sceneTitle" class="text-base sm:text-lg font-black text-white">Scene 1: Pengenalan & Masalah Capek Promosi Manual di Facebook</h3>
+                        <p id="sceneDesc" class="text-xs sm:text-sm text-slate-400 mt-1 max-w-xl">
+                            Mengapa posting manual sangat melelahkan, jangkauan minim, dan akun sering terkena checkpoint atau spam jika tidak memakai sistem otomatis.
+                        </p>
+                    </div>
+                    <a href="https://t.me/AppDockHub_Bot?start=buy_fb_pro_ref_direct" data-main-cta="true" target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 hover:opacity-95 text-white font-black text-xs sm:text-sm text-center shadow-lg transition whitespace-nowrap">
+                        🛒 Ambil Lisensi FB Manager Pro (Rp 99rb)
+                    </a>
+                </div>
+            </div>
+
+            <!-- 5 SCENE THUMBNAIL CARDS GRID -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mt-8 max-w-5xl mx-auto">
+                <div onclick="switchVideoScene(1)" class="cursor-pointer group p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-500 transition text-center">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-blue-500/15 text-blue-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">🎬</div>
+                    <div class="text-xs font-bold text-white">Scene 1: Intro</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Problem & Banned</div>
+                </div>
+                <div onclick="switchVideoScene(2)" class="cursor-pointer group p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-500 transition text-center">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-indigo-500/15 text-indigo-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">🖥️</div>
+                    <div class="text-xs font-bold text-white">Scene 2: Multi-Screen</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Anti-Detect Profile</div>
+                </div>
+                <div onclick="switchVideoScene(3)" class="cursor-pointer group p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-500 transition text-center">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">🛒</div>
+                    <div class="text-xs font-bold text-white">Scene 3: Marketplace</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Auto Post Grup & Kota</div>
+                </div>
+                <div onclick="switchVideoScene(4)" class="cursor-pointer group p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-500 transition text-center">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">⚡</div>
+                    <div class="text-xs font-bold text-white">Scene 4: Otomatisasi</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Warmup & Jadwal 24J</div>
+                </div>
+                <div onclick="switchVideoScene(5)" class="cursor-pointer group p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-500 transition text-center">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center text-lg mb-2 group-hover:scale-110 transition">💰</div>
+                    <div class="text-xs font-bold text-white">Scene 5: Earning</div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Banjir Order & Komisi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- PAIN POINTS VS SOLUTION -->
     <section id="masalah-solusi" class="py-20 bg-[#090f1e]/90 border-y border-slate-800/80">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-14">
@@ -584,6 +682,70 @@
         const BOT_USERNAME = 'AppDockHub_Bot';
         const PRODUCT_KEY = 'fb_pro';
         const IS_GAME = false;
+
+        // Video Showcase Switcher
+        const VIDEO_SCENES = {
+            1: {
+                src: 'assets/videos/fbmanager-scene1-intro.mp4',
+                badge: 'Scene 1 / 5',
+                title: 'Scene 1: Pengenalan & Masalah Capek Promosi Manual di Facebook',
+                desc: 'Mengapa posting manual sangat melelahkan, jangkauan minim, dan akun sering terkena checkpoint atau spam jika tidak memakai sistem otomatis.'
+            },
+            2: {
+                src: 'assets/videos/fbmanager-scene2-multiscreen.mp4',
+                badge: 'Scene 2 / 5',
+                title: 'Scene 2: Multi-Screen Management & Anti-Detect Browser Profile',
+                desc: 'Ternak dan kelola puluhan hingga ratusan akun Facebook sekaligus dalam satu layar laptop dengan sidik jari peramban dan cookie terisolasi.'
+            },
+            3: {
+                src: 'assets/videos/fbmanager-scene3-marketplace.mp4',
+                badge: 'Scene 3 / 5',
+                title: 'Scene 3: Auto Post FB Marketplace & Ratusan Grup Tertarget',
+                desc: 'Sebar ribuan listing produk ke berbagai kota dan posting penawaran ke ratusan grup jual beli secara otomatis sekali klik.'
+            },
+            4: {
+                src: 'assets/videos/fbmanager-scene4-automation.mp4',
+                badge: 'Scene 4 / 5',
+                title: 'Scene 4: Auto Warmup, Like, Interaksi & Penjadwalan Nonstop 24 Jam',
+                desc: 'Biarkan software menghangatkan akun baru secara organik dengan pola manusiawi, menjaga trust score akun tetap tinggi dan kebal checkpoint.'
+            },
+            5: {
+                src: 'assets/videos/fbmanager-scene5-earning.mp4',
+                badge: 'Scene 5 / 5',
+                title: 'Scene 5: Banjir Orderan Tiap Hari & Komisi Kemitraan Afiliasi 30%',
+                desc: 'Bukti closing melimpah dari toko online dan passive income komisi afiliasi Rp 29.700 per lisensi terjual langsung dari bot Telegram.'
+            }
+        };
+
+        function switchVideoScene(sceneNum) {
+            const sc = VIDEO_SCENES[sceneNum];
+            if (!sc) return;
+            const player = document.getElementById('mainVideoPlayer');
+            const source = document.getElementById('videoSource');
+            const title = document.getElementById('sceneTitle');
+            const desc = document.getElementById('sceneDesc');
+            const badge = document.getElementById('sceneBadge');
+
+            if (source && player) {
+                source.setAttribute('src', sc.src);
+                player.load();
+                player.play().catch(() => {});
+            }
+            if (title) title.textContent = sc.title;
+            if (desc) desc.textContent = sc.desc;
+            if (badge) badge.textContent = sc.badge;
+
+            for (let i = 1; i <= 5; i++) {
+                const btn = document.getElementById(`btnScene${i}`);
+                if (!btn) continue;
+                if (i === sceneNum) {
+                    btn.className = 'scene-tab-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg';
+                } else {
+                    btn.className = 'scene-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition flex items-center gap-2 bg-slate-900 border border-slate-700 text-slate-300 hover:border-blue-400';
+                }
+            }
+        }
+
 
         function getActiveReferral() {
             const params = new URLSearchParams(window.location.search);
