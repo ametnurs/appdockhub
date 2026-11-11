@@ -2,95 +2,940 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cyber Orbit: Quantum Core — Download di Google Play Store</title>
-  <meta name="description" content="Mainkan game ketangkasan neon 60 FPS Cyber Orbit: Quantum Core di Android & kumpulkan reward saldo harian!" />
-  <meta property="og:title" content="🎮 Cyber Orbit: Quantum Core — Official Android Game" />
-  <meta property="og:description" content="Tembakkan node energi ke inti kuantum, taklukkan 2000 level, dan raih hadiah saldo harian! Download gratis di Google Play Store." />
-  <meta property="og:type" content="website" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Cyber Orbit: Quantum Core — Hadiah Pengguna Baru Rp 50.000</title>
+  <meta name="description" content="Mainkan Cyber Orbit: Quantum Core! Tembakkan node energi, selesaikan 2.000 level, dan kumpulkan reward saldo harian gratis di Google Play Store." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="🎮 Cyber Orbit: Hadiah Pengguna Baru Rp 50.000" />
+  <meta property="og:description" content="Klaim saldo harian Anda sekarang di game arcade neon 60 FPS Cyber Orbit: Quantum Core!" />
+  <meta property="og:image" content="playstore_assets/feature_graphic_1024x500.png" />
   <meta property="og:url" content="https://appdockhub.com/play" />
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans & Fredoka for Game Feel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
   <style>
-    :root { --bg: #050a14; --card: #0c1428; --cyan: #00f5ff; --orange: #ff6d00; --text: #f1f5f9; --muted: #94a3b8; }
-    * { box-sizing: border-box; }
+    :root {
+      --primary-gold: #ffbe0b;
+      --gold-dark: #fb5607;
+      --accent-red: #ff0054;
+      --neon-cyan: #00f5ff;
+      --neon-blue: #3a86ff;
+      --bg-dark: #070d1e;
+      --card-bg: rgba(13, 23, 49, 0.88);
+      --card-border: rgba(0, 245, 255, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
     body {
-      margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: radial-gradient(circle at 50% 25%, #0f2042 0%, var(--bg) 70%);
-      color: var(--text); padding: 20px; text-align: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 50% 10%, #17326b 0%, #070d1e 75%),
+        radial-gradient(circle at 20% 80%, rgba(255, 0, 84, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 60%, rgba(0, 245, 255, 0.15) 0%, transparent 50%);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 90px;
+      overflow-x: hidden;
     }
-    .card {
-      max-width: 440px; width: 100%; background: var(--card);
-      border: 1.5px solid rgba(0, 245, 255, 0.3); border-radius: 24px;
-      padding: 36px 28px; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 40px rgba(0, 245, 255, 0.12);
+
+    /* Container Phone Wrapper */
+    .app-wrapper {
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 20px 16px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .orbit-icon {
-      width: 96px; height: 96px; margin: 0 auto 18px; border-radius: 22px;
-      background: radial-gradient(circle, #112240 0%, #050a14 100%);
-      border: 2px solid var(--cyan); display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 0 25px rgba(0, 245, 255, 0.35); position: relative;
+
+    /* Top Floating Header: Quick Reward */
+    .reward-header {
+      text-align: center;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 2;
     }
-    .core { width: 28px; height: 28px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 16px var(--orange); }
-    .ring {
-      position: absolute; width: 64px; height: 64px; border-radius: 50%;
-      border: 2px dashed var(--cyan); animation: spin 8s linear infinite;
+
+    .reward-title {
+      font-family: 'Fredoka', cursive;
+      font-size: 34px;
+      font-weight: 700;
+      color: #ffde59;
+      text-shadow: 
+        0 2px 0 #cc8400,
+        0 4px 0 #996300,
+        0 6px 12px rgba(0, 0, 0, 0.6),
+        0 0 25px rgba(255, 222, 89, 0.4);
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
     }
-    @keyframes spin { 100% { transform: rotate(360deg); } }
-    .badge {
-      display: inline-block; padding: 4px 12px; border-radius: 99px;
-      background: rgba(0, 245, 255, 0.12); color: var(--cyan);
-      font-size: 11.5px; font-weight: 700; letter-spacing: 0.8px; margin-bottom: 10px;
+
+    .reward-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #ff2a6d 0%, #d80032 100%);
+      color: #ffffff;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      padding: 6px 28px;
+      border-radius: 999px;
+      border: 3px solid #ff758f;
+      box-shadow: 
+        0 6px 20px rgba(216, 0, 50, 0.6),
+        inset 0 2px 4px rgba(255, 255, 255, 0.5);
+      animation: floatBadge 3s ease-in-out infinite;
     }
-    h1 { font-size: 24px; margin: 0 0 8px; color: #fff; }
-    p { font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0 0 24px; }
-    .btn-play {
-      display: block; width: 100%; padding: 15px 20px; border-radius: 14px;
+
+    @keyframes floatBadge {
+      0%, 100% { transform: translateY(0px) scale(1); }
+      50% { transform: translateY(-5px) scale(1.03); }
+    }
+
+    /* Hero Section (Game Mascot / Quantum Core Animation) */
+    .hero-container {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 15px 0 20px;
+    }
+
+    .hero-bg-glow {
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(0, 245, 255, 0.25) 0%, rgba(255, 190, 11, 0.15) 45%, transparent 70%);
+      border-radius: 50%;
+      animation: pulseGlow 4s infinite alternate;
+      z-index: 1;
+    }
+
+    @keyframes pulseGlow {
+      0% { transform: scale(0.9); opacity: 0.6; }
+      100% { transform: scale(1.2); opacity: 1; }
+    }
+
+    .mascot-card {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 340px;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 2px solid rgba(0, 245, 255, 0.4);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 245, 255, 0.25);
+      background: #0b152d;
+    }
+
+    .mascot-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .mascot-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .floating-coin {
+      position: absolute;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      color: #5c3500;
+      font-weight: 900;
+      box-shadow: 0 6px 15px rgba(255, 140, 0, 0.6);
+      animation: coinFloat 3s infinite ease-in-out;
+    }
+
+    .coin-1 {
+      width: 48px;
+      height: 48px;
+      font-size: 20px;
+      top: -10px;
+      right: 15px;
+      animation-delay: 0s;
+    }
+
+    .coin-2 {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      bottom: 25px;
+      left: 10px;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes coinFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(12deg); }
+    }
+
+    /* Main Big Action Button */
+    .btn-download-main {
+      width: 100%;
+      max-width: 340px;
+      position: relative;
+      background: linear-gradient(180deg, #ffd13b 0%, #ff9800 100%);
+      color: #3b2000;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      padding: 16px 24px;
+      border-radius: 18px;
+      border: 3px solid #ffe97d;
+      box-shadow: 
+        0 8px 0 #cc6d00,
+        0 14px 25px rgba(255, 152, 0, 0.45);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .btn-download-main:hover {
+      filter: brightness(1.05);
+    }
+
+    .btn-download-main:active {
+      transform: translateY(6px);
+      box-shadow: 
+        0 2px 0 #cc6d00,
+        0 6px 15px rgba(255, 152, 0, 0.3);
+    }
+
+    /* Shiny sweep light effect */
+    .btn-download-main::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0) 20%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(255, 255, 255, 0) 80%
+      );
+      transform: rotate(25deg);
+      animation: shineSweep 3.2s infinite;
+    }
+
+    @keyframes shineSweep {
+      0% { left: -60%; }
+      30%, 100% { left: 140%; }
+    }
+
+    /* Referral Info Box */
+    .referral-box {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 13.5px;
+      color: #cbd5e1;
+    }
+
+    .referral-code-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px dashed rgba(255, 190, 11, 0.6);
+      padding: 4px 12px;
+      border-radius: 8px;
+      color: #ffde59;
+      font-weight: 800;
+      font-family: monospace;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .referral-code-badge:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    /* "They Got Paid!" Live Social Proof Card (Persis Referensi Contoh) */
+    .paid-card {
+      width: 100%;
+      max-width: 360px;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 20px 18px 14px;
+      color: #1e293b;
+      box-shadow: 
+        0 14px 35px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(0, 245, 255, 0.15);
+      border: 3px solid #22c55e;
+      position: relative;
+    }
+
+    .paid-header {
+      text-align: center;
+      color: #16a34a;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .paid-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .paid-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      background: #f8fafc;
+      border-radius: 14px;
+      border-left: 4px solid #16a34a;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      animation: fadeInRow 0.5s ease-out;
+    }
+
+    @keyframes fadeInRow {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .paid-user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .user-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+      color: #ffffff;
+    }
+
+    .user-name {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .user-time {
+      font-size: 11px;
+      color: #94a3b8;
+    }
+
+    .paid-amount {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #dc2626;
+      background: #fee2e2;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    /* Game Feature Highlights */
+    .feature-grid {
+      width: 100%;
+      max-width: 360px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .feature-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 14px 12px;
+      text-align: center;
+    }
+
+    .feature-box i {
+      font-size: 22px;
+      color: var(--neon-cyan);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .feature-box h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 2px;
+    }
+
+    .feature-box p {
+      font-size: 11px;
+      color: #94a3b8;
+    }
+
+    /* Sticky Bottom Bar */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(11, 18, 38, 0.95);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(0, 245, 255, 0.25);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.6);
+    }
+
+    .sticky-content {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .sticky-app {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sticky-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
+      border: 1.5px solid var(--neon-cyan);
+      box-shadow: 0 0 10px rgba(0, 245, 255, 0.4);
+    }
+
+    .sticky-meta h3 {
+      font-size: 13px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .sticky-meta p {
+      font-size: 11px;
+      color: #ffbe0b;
+      font-weight: 600;
+    }
+
+    .btn-sticky-download {
+      background: linear-gradient(180deg, #ffd13b 0%, #ff9800 100%);
+      color: #3b2000;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 12px;
+      border: 2px solid #ffe97d;
+      box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+      cursor: pointer;
+      text-decoration: none;
+      flex-shrink: 0;
+      transition: transform 0.15s;
+    }
+
+    .btn-sticky-download:active {
+      transform: scale(0.96);
+    }
+
+    /* Modal Download 2-Step Flow */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(8px);
+      z-index: 200;
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .modal-sheet {
+      width: 100%;
+      max-width: 440px;
+      background: #0d1731;
+      border-top-left-radius: 28px;
+      border-top-right-radius: 28px;
+      border: 2px solid rgba(0, 245, 255, 0.35);
+      border-bottom: none;
+      padding: 24px 20px 32px;
+      box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.8);
+      animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+
+    .sheet-handle {
+      width: 44px;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 99px;
+      margin: 0 auto 16px;
+    }
+
+    .sheet-title {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 22px;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .sheet-subtitle {
+      font-size: 13px;
+      color: #94a3b8;
+      text-align: center;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    /* Step Card */
+    .step-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 14px;
+      margin-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .step-card.active-step {
+      border-color: #00f5ff;
+      background: rgba(0, 245, 255, 0.08);
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .step-badge {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #00f5ff;
+      color: #050a14;
+      font-weight: 800;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-badge.done {
+      background: #22c55e;
+      color: #ffffff;
+    }
+
+    .step-text {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #f1f5f9;
+    }
+
+    .step-desc {
+      font-size: 12px;
+      color: #94a3b8;
+      margin-left: 36px;
+      margin-top: -6px;
+    }
+
+    .btn-step-action {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+    }
+
+    .btn-step-google {
+      background: #1a73e8;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(26, 115, 232, 0.4);
+    }
+
+    .btn-step-google:hover {
+      background: #1557b0;
+    }
+
+    .btn-step-playstore {
       background: linear-gradient(135deg, #00e676 0%, #00bfa5 100%);
-      color: #04120c; font-weight: 800; font-size: 16px; text-decoration: none;
-      box-shadow: 0 8px 25px rgba(0, 230, 118, 0.35); transition: transform 0.15s;
+      color: #04120c;
+      box-shadow: 0 4px 15px rgba(0, 230, 118, 0.4);
     }
-    .btn-play:active { transform: scale(0.98); }
-    .status { font-size: 12px; color: var(--cyan); margin-top: 16px; }
+
+    .btn-close-modal {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: #64748b;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+
+    /* Toast Notification */
+    .toast-msg {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-100px);
+      background: #22c55e;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toast-msg.show {
+      transform: translateX(-50%) translateY(0);
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="orbit-icon">
-      <div class="ring"></div>
-      <div class="core"></div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-msg">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastText">Kode Referral Berhasil Disalin!</span>
+  </div>
+
+  <div class="app-wrapper">
+
+    <!-- Top Header: Quick Reward Rp 50.000 -->
+    <div class="reward-header">
+      <div class="reward-title">Quick Reward</div>
+      <div class="reward-pill">Rp 50.000</div>
     </div>
-    <span class="badge">GOOGLE PLAY STORE OFFICIAL</span>
-    <h1>Cyber Orbit: Quantum Core</h1>
-    <p>Game ketangkasan neon 60 FPS! Tembakkan node ke inti kuantum, taklukkan 2.000 level, dan kumpulkan hadiah saldo harian.</p>
-    <a id="playStoreBtn" class="btn-play" href="https://play.google.com/store/apps/details?id=com.appdockhub.ecosystem">
-      ▶ Download di Google Play Store
-    </a>
-    <div id="statusText" class="status">Mengarahkan otomatis ke Google Play Store...</div>
+
+    <!-- Hero Character / Feature Graphic with Floating 3D Coins -->
+    <div class="hero-container">
+      <div class="hero-bg-glow"></div>
+      
+      <!-- Floating Coins -->
+      <div class="floating-coin coin-1"><i class="fas fa-coins"></i></div>
+      <div class="floating-coin coin-2">Rp</div>
+
+      <div class="mascot-card">
+        <img src="playstore_assets/feature_graphic_1024x500.png" alt="Cyber Orbit: Quantum Core" />
+      </div>
+    </div>
+
+    <!-- Main Yellow 3D CTA Button -->
+    <button id="mainDownloadBtn" class="btn-download-main" onclick="openDownloadModal()">
+      <i class="fas fa-download"></i>
+      <span>Download Now</span>
+    </button>
+
+    <!-- Referral Info & Auto-Copy (Persis Reference Image) -->
+    <div class="referral-box">
+      <div>Enter Referral ID: <span id="refBadge" class="referral-code-badge" onclick="copyReferralCode()"><span id="refCodeText">10617715</span> <i class="fas fa-copy text-xs"></i></span></div>
+      <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Claim your reward in Cyber Orbit!</div>
+    </div>
+
+    <!-- "They Got Paid!" Live Social Proof Card (Identik dengan Gambar Acuan) -->
+    <div class="paid-card">
+      <div class="paid-header">
+        <i class="fas fa-chevron-up text-xs"></i>
+        <span>They Got Paid!</span>
+        <i class="fas fa-chevron-up text-xs"></i>
+      </div>
+
+      <div id="paidList" class="paid-list">
+        <!-- Live Items Inserted Dynamically -->
+      </div>
+    </div>
+
+    <!-- Game Feature Badges -->
+    <div class="feature-grid">
+      <div class="feature-box">
+        <i class="fas fa-bolt"></i>
+        <h4>60 FPS Arcade</h4>
+        <p>Aksi Neon Responsif</p>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-layer-group"></i>
+        <h4>2.000+ Level</h4>
+        <p>Boss Stage Menantang</p>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-wallet"></i>
+        <h4>Reward Harian</h4>
+        <p>Misi Iklan Cuan</p>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-shield-alt"></i>
+        <h4>Google Verified</h4>
+        <p>Play Store Official</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Sticky Bottom Bar (Persis Contoh Aplikasi Modern) -->
+  <div class="sticky-bar">
+    <div class="sticky-content">
+      <div class="sticky-app">
+        <img class="sticky-icon" src="playstore_assets/app_icon_512x512.png" alt="Icon" />
+        <div class="sticky-meta">
+          <h3>Cyber Orbit</h3>
+          <p>Reward: Rp 50.000</p>
+        </div>
+      </div>
+      <button class="btn-sticky-download" onclick="openDownloadModal()">
+        Download
+      </button>
+    </div>
+  </div>
+
+  <!-- Two-Step Smart Download Modal (Menjawab Masalah Google Group) -->
+  <div id="downloadModal" class="modal-backdrop" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-sheet">
+      <div class="sheet-handle"></div>
+      <h3 class="sheet-title">🎮 Pasang Cyber Orbit Resmi</h3>
+      <p class="sheet-subtitle">Ikuti 2 langkah mudah di bawah untuk mengaktifkan tombol <b>INSTALL</b> di Google Play Store:</p>
+
+      <!-- Step 1: Google Group -->
+      <div id="step1Card" class="step-card active-step">
+        <div class="step-header">
+          <div id="badge1" class="step-badge">1</div>
+          <div class="step-text">Gabung Akses Penguji (Google Group)</div>
+        </div>
+        <div class="step-desc">Cukup 1x klik tombol <b>"Gabung ke grup"</b> di tab baru.</div>
+        <button id="btnGroup" class="btn-step-action btn-step-google" onclick="handleJoinGroup()">
+          <i class="fab fa-google"></i>
+          <span>1. Buka & Gabung Grup Tester</span>
+        </button>
+      </div>
+
+      <!-- Step 2: Play Store -->
+      <div id="step2Card" class="step-card">
+        <div class="step-header">
+          <div id="badge2" class="step-badge">2</div>
+          <div class="step-text">Buka & Install di Google Play Store</div>
+        </div>
+        <div class="step-desc">Tombol <b>INSTALL HIJAU</b> resmi langsung aktif untuk akun Anda.</div>
+        <a id="btnPlayStore" class="btn-step-action btn-step-playstore" href="#" onclick="handleOpenPlayStore(event)">
+          <i class="fab fa-google-play"></i>
+          <span>2. Pasang di Google Play Store</span>
+        </a>
+      </div>
+
+      <button class="btn-close-modal" onclick="closeDownloadModal()">Tutup</button>
+    </div>
   </div>
 
   <script>
-    (function() {
-      var params = new URLSearchParams(window.location.search);
-      var ref = (params.get('ref') || '').replace(/^ref_/, '').trim();
-      var game = (params.get('game') || 'cyber_orbit').trim();
-      var pkg = 'com.appdockhub.ecosystem';
-      var playUrl = 'https://play.google.com/store/apps/details?id=' + pkg + (ref ? '&referrer=' + encodeURIComponent('ref_' + ref) : '');
+    // Configuration URLs
+    const GOOGLE_GROUP_URL = 'https://groups.google.com/g/cyber-orbit';
+    const PLAY_OPT_IN_URL = 'https://play.google.com/apps/testing/com.appdockhub.ecosystem';
+    const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.appdockhub.ecosystem';
 
-      var btn = document.getElementById('playStoreBtn');
-      if (btn) btn.href = playUrl;
+    // Parse URL Query Parameters (?ref=...)
+    const urlParams = new URLSearchParams(window.location.search);
+    const refParam = (urlParams.get('ref') || urlParams.get('code') || '10617715').replace(/^ref_/, '').trim();
 
-      if (ref) {
-        // Catat IP & Referrer ID ke Cloudflare Worker agar saat pemain membuka game langsung terikat ke pengundang
-        fetch('https://api.appdockhub.com/api/referral/click?ref=' + encodeURIComponent(ref) + '&game=' + encodeURIComponent(game), {
+    // Display Referral Code
+    document.getElementById('refCodeText').innerText = refParam;
+
+    // Toast Utility
+    function showToast(text) {
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toastText');
+      toastText.innerText = text;
+      toast.classList.add('show');
+      setTimeout(() => { toast.classList.remove('show'); }, 2500);
+    }
+
+    // Copy Referral Code
+    function copyReferralCode() {
+      navigator.clipboard.writeText(refParam).then(() => {
+        showToast('✅ ID Referral ' + refParam + ' Disalin!');
+      }).catch(() => {
+        showToast('ID Referral: ' + refParam);
+      });
+    }
+
+    // Modal Handlers
+    const modal = document.getElementById('downloadModal');
+
+    function openDownloadModal() {
+      // Auto copy referral code on download click for smooth user onboarding
+      copyReferralCode();
+      modal.style.display = 'flex';
+    }
+
+    function closeDownloadModal() {
+      modal.style.display = 'none';
+    }
+
+    function closeModalOnBackdrop(e) {
+      if (e.target === modal) {
+        closeDownloadModal();
+      }
+    }
+
+    // Smart 2-Step Flow
+    let hasJoinedGroup = false;
+
+    function handleJoinGroup() {
+      // Buka Google Group di tab baru
+      window.open(GOOGLE_GROUP_URL, '_blank');
+
+      // Update UI to Step 2
+      hasJoinedGroup = true;
+      document.getElementById('badge1').classList.add('done');
+      document.getElementById('badge1').innerHTML = '<i class="fas fa-check"></i>';
+      document.getElementById('step1Card').classList.remove('active-step');
+
+      document.getElementById('step2Card').classList.add('active-step');
+      const btnPlay = document.getElementById('btnPlayStore');
+      btnPlay.style.transform = 'scale(1.03)';
+      btnPlay.style.boxShadow = '0 6px 20px rgba(0, 230, 118, 0.6)';
+
+      showToast('Langkah 1 selesai! Sekarang klik Langkah 2.');
+    }
+
+    function handleOpenPlayStore(e) {
+      // Redirect to Google Play Testing Opt-in or App Store
+      const targetUrl = PLAY_OPT_IN_URL;
+      window.location.href = targetUrl;
+    }
+
+    // Live "They Got Paid!" Simulated Real-time Payout Ticker
+    const PAYOUT_USERS = [
+      { name: 'Budi San...', amount: 'Rp 50.000', color: '#16a34a', initial: 'B' },
+      { name: 'Siti Rah...', amount: 'Rp 100.000', color: '#8b5cf6', initial: 'S' },
+      { name: 'Rian Pra...', amount: 'Rp 50.000', color: '#0284c7', initial: 'R' },
+      { name: 'Dimas Ku...', amount: 'Rp 50.000', color: '#ea580c', initial: 'D' },
+      { name: 'Ayu Lest...', amount: 'Rp 150.000', color: '#ec4899', initial: 'A' },
+      { name: 'Fajar Ma...', amount: 'Rp 50.000', color: '#10b981', initial: 'F' },
+      { name: 'Hendra W...', amount: 'Rp 100.000', color: '#6366f1', initial: 'H' },
+      { name: 'Wahyu Nu...', amount: 'Rp 50.000', color: '#f59e0b', initial: 'W' },
+      { name: 'Rizky Pe...', amount: 'Rp 50.000', color: '#06b6d4', initial: 'R' }
+    ];
+
+    let currentList = PAYOUT_USERS.slice(0, 4);
+
+    function renderPayouts() {
+      const container = document.getElementById('paidList');
+      container.innerHTML = '';
+      currentList.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'paid-item';
+        row.innerHTML = `
+          <div class="paid-user">
+            <div class="user-avatar" style="background: ${item.color}">${item.initial}</div>
+            <div>
+              <div class="user-name">${item.name} got <span style="color: #dc2626">${item.amount}!</span></div>
+              <div class="user-time">Baru saja mencairkan</div>
+            </div>
+          </div>
+          <div class="paid-amount">${item.amount}</div>
+        `;
+        container.appendChild(row);
+      });
+    }
+
+    renderPayouts();
+
+    // Auto rotate ticker every 3.5 seconds
+    setInterval(() => {
+      const randomUser = PAYOUT_USERS[Math.floor(Math.random() * PAYOUT_USERS.length)];
+      currentList.pop();
+      currentList.unshift(randomUser);
+      renderPayouts();
+    }, 3500);
+
+    // Sync click tracking to worker backend (if ref exists)
+    if (refParam) {
+      try {
+        fetch('https://studio.appdockhub.com/api/referral/click?ref=' + encodeURIComponent(refParam) + '&game=cyber_orbit', {
           method: 'GET',
           mode: 'cors',
           keepalive: true
-        }).catch(function() {}).finally(function() {
-          setTimeout(function() { window.location.replace(playUrl); }, 900);
-        });
-      } else {
-        setTimeout(function() { window.location.replace(playUrl); }, 900);
-      }
-    })();
+        }).catch(() => {});
+      } catch (_) {}
+    }
   </script>
 </body>
 </html>
