@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <!-- Monetization Meta -->
+    <script>(function(s){s.dataset.zone='12174784',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+    <meta name="monetag" content="dbd4608b1dcb969fe956b0b165086815">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Manager AI Studio — Generator Musik & Vokal AI Otomatis (Official AppDockHub)</title>
+    <meta name="description" content="Software desktop otomatisasi musik & vokal AI terlengkap: 18+ Genre Musik Populer, 11 Bahasa Vokal, Multi-Account Quota Rotation, Audio DSP Mastering -14 LUFS Spotify Standard & Auto Cover Art 3000px siap monetisasi royalti musik streaming!">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            purple: '#8b5cf6',
+                            cyan: '#06b6d4',
+                            pink: '#ec4899',
+                            gold: '#f59e0b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #060913;
+            background-image:
+                radial-gradient(at 15% 10%, rgba(139, 92, 246, 0.18) 0px, transparent 45%),
+                radial-gradient(at 85% 15%, rgba(6, 182, 212, 0.16) 0px, transparent 45%),
+                radial-gradient(at 50% 60%, rgba(236, 72, 153, 0.10) 0px, transparent 55%);
+        }
+        .pulse-cta {
+            animation: pulseGlow 2.4s infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.5), 0 15px 35px -5px rgba(6, 182, 212, 0.4); }
+            50% { box-shadow: 0 0 0 12px rgba(139, 92, 246, 0), 0 20px 45px -5px rgba(236, 72, 153, 0.6); }
+        }
+        .audio-wave {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            height: 20px;
+        }
+        .audio-bar {
+            width: 3px;
+            background: linear-gradient(180deg, #06b6d4, #8b5cf6);
+            border-radius: 9999px;
+            animation: waveAnim 1.2s ease-in-out infinite;
+        }
+        .audio-bar:nth-child(2) { animation-delay: 0.15s; }
+        .audio-bar:nth-child(3) { animation-delay: 0.3s; }
+        .audio-bar:nth-child(4) { animation-delay: 0.45s; }
+        .audio-bar:nth-child(5) { animation-delay: 0.6s; }
+        @keyframes waveAnim {
+            0%, 100% { height: 6px; }
+            50% { height: 20px; }
+        }
+    </style>
+</head>
+<body class="text-slate-100 font-sans antialiased min-h-screen pb-24">
+
+    <!-- TOP URGENCY BAR -->
+    <div class="bg-gradient-to-r from-violet-600 via-purple-600 to-cyan-500 text-white py-2.5 px-4 text-center text-xs sm:text-sm font-extrabold shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+            <span class="bg-slate-950 text-amber-300 px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-wider">⚡ PENAWARAN SPESIAL SOUND CREATOR</span>
+            <span>Rilis Lagu & Vokal AI Tanpa Batas! Mulai dari <strong>Rp 99.000</strong> (Diskon 60% Hari Ini)!</span>
+            <span id="refBadgeTop" class="hidden bg-slate-950/90 text-emerald-300 px-2.5 py-0.5 rounded-full text-[11px]">
+                🤝 Mitra Afiliasi: #<span id="refCodeDisplay">direct</span>
+            </span>
+        </div>
+    </div>
+
+    <!-- NAVBAR + LIVE SOCIAL PROOF TICKER DI HEADER -->
+    <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#060913]/90 border-b border-slate-800/80 shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 h-18 py-4 flex items-center justify-between">
+            <a href="index.html" data-keep-ref="true" class="flex items-center gap-3 group">
+                <div class="h-10 w-10 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-lg group-hover:border-violet-400 transition">
+                    ←
+                </div>
+                <div>
+                    <span class="text-sm font-extrabold text-white block">Kembali ke Katalog Utama</span>
+                    <span class="text-[11px] text-slate-400">appdockhub.com</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center gap-6 text-xs font-bold text-slate-300">
+                <a href="#masalah-solusi" class="hover:text-white transition">Masalah vs Solusi</a>
+                <a href="#fitur" class="hover:text-cyan-400 transition">✨ Fitur Studio</a>
+                <a href="#genre-bahasa" class="hover:text-purple-400 transition">🎵 18+ Genre & 11 Bahasa</a>
+                <a href="#harga" class="hover:text-amber-400 transition">💰 Harga Lisensi</a>
+                <a href="#faq" class="hover:text-white transition">❓ FAQ</a>
+            </div>
+
+            <a href="#harga" class="px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 via-purple-600 to-cyan-500 hover:opacity-95 text-white font-extrabold text-xs sm:text-sm shadow-lg shadow-purple-600/30 transition">
+                ⚡ Ambil Lisensi Resmi
+            </a>
+        </div>
+
+        <!-- LIVE SOCIAL PROOF BAR (TERJUAL & PENCAIRAN KOMISI AFFILIATE) -->
+        <div class="bg-gradient-to-r from-slate-950/95 via-purple-950/70 to-slate-950/95 border-t border-slate-800/80 py-2 px-4 overflow-hidden">
+            <div class="max-w-7xl mx-auto flex items-center justify-center gap-2.5 text-xs">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-violet-500/20 border border-violet-500/40 text-violet-300 font-extrabold text-[10px] uppercase tracking-wider shrink-0" id="liveProofBadge">
+                    🛒 LISENSI TERJUAL
+                </span>
+                <div id="liveProofText" class="text-slate-200 font-medium text-center truncate transition-all duration-500 opacity-100">
+                    🔥 <strong class="text-amber-300">Fajar Nugroho (Malang)</strong> baru saja mengaktifkan <strong class="text-white">Sound Manager AI Studio (30 Hari - Rp 99.000)</strong> via QRIS • <span class="text-emerald-400 font-bold">✓ Aktif Instan</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-24 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-violet-500/15 border border-violet-500/40 text-violet-300 text-xs font-extrabold uppercase tracking-wider mb-6">
+                    <div class="audio-wave">
+                        <div class="audio-bar"></div>
+                        <div class="audio-bar"></div>
+                        <div class="audio-bar"></div>
+                        <div class="audio-bar"></div>
+                        <div class="audio-bar"></div>
+                    </div>
+                    <span>AI MUSIC & VOCAL GENERATOR STUDIO #1 DI INDONESIA</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white leading-[1.15] mb-6">
+                    Bikin Puluhan Lagu Viral & Vokal AI Otomatis, Mastering -14 LUFS & Siap Raup Royalti Musik!
+                </h1>
+
+                <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-10 max-w-3xl mx-auto">
+                    Software desktop otomatisasi musik tercanggih untuk Content Creator, Produser Musik & Affiliate: Hasilkan lagu full vokal studio dari <strong class="text-cyan-400">18+ Genre Musik Populer</strong>, <strong class="text-purple-400">11 Bahasa Vokal</strong>, Audio DSP Mastering (<strong class="text-emerald-400">-14 LUFS Spotify Standard</strong>), serta Auto Cover Art 3000x3000px Ultra HD siap submit ke agregator musik & TikTok sound!
+                </p>
+
+                <!-- WORKFLOW SHOWCASE BANNER -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto mb-10">
+                    <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 text-center">
+                        <div class="text-2xl mb-1">🎼</div>
+                        <div class="font-extrabold text-white text-sm">18+ Genre Viral</div>
+                        <div class="text-[11px] text-slate-400">Koplo, Phonk, Pop, LoFi</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 text-center">
+                        <div class="text-2xl mb-1">🎤</div>
+                        <div class="font-extrabold text-white text-sm">11 Bahasa Vokal</div>
+                        <div class="text-[11px] text-slate-400">Indo, Jawa, Sunda, English</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 text-center">
+                        <div class="text-2xl mb-1">🎚️</div>
+                        <div class="font-extrabold text-white text-sm">DSP -14 LUFS</div>
+                        <div class="text-[11px] text-slate-400">Spotify & Apple Master</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 text-center">
+                        <div class="text-2xl mb-1">🎨</div>
+                        <div class="font-extrabold text-white text-sm">Cover Art 3000px</div>
+                        <div class="text-[11px] text-slate-400">Siap Submit Agregator</div>
+                    </div>
+                </div>
+
+                <!-- CTA BUTTONS -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#harga" class="pulse-cta w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-violet-600 via-purple-600 to-cyan-500 hover:opacity-95 text-white font-black text-base shadow-2xl transition">
+                        ⚡ Pilih Paket Lisensi Resmi (Mulai Rp 99rb) →
+                    </a>
+                    <a href="#fitur" class="w-full sm:w-auto px-6 py-4 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-bold text-base transition">
+                        📖 Pelajari Fitur Lengkap
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MASALAH VS SOLUSI -->
+    <section id="masalah-solusi" class="py-16 bg-slate-950/60 border-y border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-xs font-extrabold text-violet-400 uppercase tracking-widest block mb-2">MASALAH VS SOLUSI</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white">Kenapa Produser & Kreator Musik Beralih ke Sound Manager AI?</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- SISI MASALAH -->
+                <div class="p-7 rounded-3xl bg-rose-950/20 border border-rose-800/40 space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/20 text-rose-400 text-xs font-bold uppercase">
+                        ❌ Cara Lama (Ribet, Mahal & Lambat)
+                    </div>
+                    <ul class="space-y-3.5 text-sm text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <span class="text-rose-400 font-bold shrink-0">✕</span>
+                            <span><strong>Biaya Sewa Studio Mahal:</strong> Bikin 1 lagu butuh jutaan rupiah untuk sewa komposer, vokalist, mixing dan mastering.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-rose-400 font-bold shrink-0">✕</span>
+                            <span><strong>Kena Limit Kuota AI:</strong> Platform AI musik sering membatasi generate harian dan akun cepat habis token.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-rose-400 font-bold shrink-0">✕</span>
+                            <span><strong>Ditolak Agregator Musik:</strong> Loudness tidak standar, audio pecah atau tidak memenuhi standar -14 LUFS Spotify.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-rose-400 font-bold shrink-0">✕</span>
+                            <span><strong>Pusing Bikin Cover Art:</strong> Agregator mewajibkan gambar cover 3000x3000px RGB tanpa watermark yang repot diedit manual.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- SISI SOLUSI SOUND MANAGER -->
+                <div class="p-7 rounded-3xl bg-emerald-950/20 border border-emerald-800/40 space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase">
+                        ✓ Solusi Sound Manager AI Studio
+                    </div>
+                    <ul class="space-y-3.5 text-sm text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-400 font-bold shrink-0">✓</span>
+                            <span><strong>Mass Generate Sekali Klik:</strong> Produksi hingga puluhan lagu siap edar sekaligus secara otomatis dalam mode batch background.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-400 font-bold shrink-0">✓</span>
+                            <span><strong>Multi-Account Smart Pool:</strong> Rotasi akun Google AI cerdas otomatis saat kuota limit, login headless seamless tanpa pop-up.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-400 font-bold shrink-0">✓</span>
+                            <span><strong>Built-In Audio DSP Mastering:</strong> Otomatis dinormalisasi ke standar industri Spotify (-14.0 LUFS) dengan file WAV Master & MP3 320kbps.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-400 font-bold shrink-0">✓</span>
+                            <span><strong>Auto 3000px Cover Art:</strong> Setiap lagu langsung dibuatkan cover album beresolusi tinggi 3000x3000px 300 DPI siap upload agregator!</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FITUR LENGKAP -->
+    <section id="fitur" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-extrabold text-cyan-400 uppercase tracking-widest block mb-2">FITUR PROFESIONAL</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white">Semua Kebutuhan Musik Digital Anda Ada di Satu Aplikasi Desktop</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- CARD 1 -->
+                <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-violet-500/60 transition space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-violet-500/15 border border-violet-500/30 flex items-center justify-center text-2xl text-violet-400">
+                        🎵
+                    </div>
+                    <h3 class="text-lg font-extrabold text-white">18+ Genre Musik Komersial</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Lengkap dari Dangdut Koplo, DJ Jedag Jedug, Indonesian Pop Galau, Brazilian Phonk, Lo-Fi, Hip Hop, hingga Cyberpunk & BGM Cinematic.
+                    </p>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-cyan-500/60 transition space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-2xl text-cyan-400">
+                        🎤
+                    </div>
+                    <h3 class="text-lg font-extrabold text-white">11 Bahasa & Karakter Vokal</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Pilihan vokal Pria, Wanita, Duet, Chorus, atau Instrumental dengan artikulasi jernih Bahasa Indonesia, Jawa, Sunda, English, Japanese, dll.
+                    </p>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-pink-500/60 transition space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-pink-500/15 border border-pink-500/30 flex items-center justify-center text-2xl text-pink-400">
+                        🔄
+                    </div>
+                    <h3 class="text-lg font-extrabold text-white">Smart Multi-Account Pool</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Simpan dan hubungkan banyak akun Google AI Studio. Sistem otomatis berpindah ke akun yang memiliki sisa kuota tanpa perlu intervensi manual!
+                    </p>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/60 transition space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-2xl text-emerald-400">
+                        🎚️
+                    </div>
+                    <h3 class="text-lg font-extrabold text-white">FFmpeg DSP Loudness Mastering</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Pemrosesan mastering audio bawaan dengan target -14.0 LUFS. Menghasilkan dynamic range optimal yang lolos kurasi Spotify, YouTube Music, dan Apple Music.
+                    </p>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/60 transition space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-2xl text-amber-400">
+                        🖼️
+                    </div>
+                    <h3 class="text-lg font-extrabold text-white">Auto Cover Art 3000x3000px</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Otomatis menghasilkan artwork cover album 3000x3000px 300 DPI warna RGB yang disesuaikan secara tematis dengan genre dan mood lagu Anda.
+                    </p>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-indigo-500/60 transition space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center text-2xl text-indigo-400">
+                        💰
+                    </div>
+                    <h3 class="text-lg font-extrabold text-white">100% Royalti & Hak Komersial</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Semua track yang dihasilkan adalah milik Anda sepenuhnya. Bebas di-monetisasi di YouTube Content ID, TikTok Sound, Spotify, dan marketplace audio.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GENRE & BAHASA SHOWCASE -->
+    <section id="genre-bahasa" class="py-16 bg-slate-950/40 border-y border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-extrabold text-violet-400 uppercase tracking-widest block mb-2">KATALOG GENRE & BAHASA</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white">Mendukung Ragam Budaya Lokal & Pasar Global</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- LIST GENRE -->
+                <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8">
+                    <h3 class="text-lg font-black text-cyan-400 mb-4 flex items-center gap-2">
+                        <span>🎼</span> 18+ Genre Populer Siap Pakai:
+                    </h3>
+                    <div class="grid grid-cols-2 gap-2 text-xs text-slate-300">
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">✓ Dangdut Koplo Modern</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">✓ Indonesian Pop Galau</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">✓ DJ Jedag Jedug / Bass Horeg</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">✓ Brazilian Phonk Drift</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">✓ Lo-Fi Hip Hop Chillout</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">✓ Cyberpunk Synthwave</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">✓ Ambient Sleep & Meditation</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">✓ Epic Cinematic BGM</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">✓ K-Pop & J-Pop Dance</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">✓ RnB / Trap / EDM Festival</div>
+                    </div>
+                </div>
+
+                <!-- LIST BAHASA -->
+                <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8">
+                    <h3 class="text-lg font-black text-purple-400 mb-4 flex items-center gap-2">
+                        <span>🎤</span> 11 Bahasa Vokal AI Terintegrasi:
+                    </h3>
+                    <div class="grid grid-cols-2 gap-2 text-xs text-slate-300">
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">🇮🇩 Bahasa Indonesia</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">🌾 Bahasa Jawa (Koplo)</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">🌿 Bahasa Sunda</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">🇲🇾 Bahasa Melayu</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">🇬🇧 English (Global)</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">🇯🇵 Japanese (Anime/J-Pop)</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">🇰🇷 Korean (K-Pop)</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">🇸🇦 Arabic / Gambus</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">🇪🇸 Spanish / Reggaeton</div>
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800/60">🇫🇷 French / 🇩🇪 German</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="harga" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-extrabold text-amber-400 uppercase tracking-widest block mb-2">PILIHAN INVESTASI LISENSI RESMI</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white">Investasi Sekali, Cuan Royalti Mengalir Tiap Hari</h2>
+                <p class="text-sm text-slate-400 mt-3">Lisensi resmi terikat HWID perangkat dengan proteksi cloudflare & aktivasi instan melalui Bot Telegram.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                <!-- PAKET 30 HARI -->
+                <div class="rounded-3xl bg-slate-900/90 border border-slate-800 p-8 flex flex-col justify-between hover:border-violet-500/50 transition">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-bold mb-4">
+                            PAKET STARTER (30 HARI)
+                        </div>
+                        <div class="mb-6">
+                            <span class="text-xs text-slate-500 line-through block">Rp 249.000</span>
+                            <div class="text-4xl font-black text-white">Rp 99.000</div>
+                            <span class="text-xs text-violet-400 font-bold">Masa Aktif 30 Hari Penuh</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-6">Pilihan pas untuk eksplorasi, rilisan EP mini album perdana & uji pasar streaming.</p>
+                        <ul class="text-xs text-slate-300 space-y-3 mb-8">
+                            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Lisensi Resmi untuk 1 PC / Laptop</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Full Akses 18+ Genre Musik</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Full Akses 11 Bahasa Vokal</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Audio DSP -14 LUFS Spotify Master</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Auto Generate Cover Art 3000px</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Komisi Afiliasi 30% (Rp 29.700/sale)</li>
+                        </ul>
+                    </div>
+                    <a href="https://t.me/AppDockHub_Bot?start=buy_sm_30d_ref_direct" data-buy-30d="true" target="_blank" class="block w-full py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-extrabold text-center text-sm transition">
+                        Beli Paket 30 Hari (Rp 99.000)
+                    </a>
+                </div>
+
+                <!-- PAKET 6 BULAN (BEST VALUE) -->
+                <div class="relative rounded-3xl bg-gradient-to-b from-slate-900 to-violet-950/40 border-2 border-violet-500 p-8 flex flex-col justify-between shadow-2xl shadow-violet-500/20 transform md:-translate-y-3">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 text-white text-xs font-black uppercase tracking-wider shadow-lg">
+                        ⭐ PALING POPULER (HEMAT 50%)
+                    </div>
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-violet-500/20 text-violet-300 text-xs font-bold mb-4 mt-2">
+                            PAKET PRO PRODUSER (6 BULAN)
+                        </div>
+                        <div class="mb-6">
+                            <span class="text-xs text-slate-500 line-through block">Rp 999.000</span>
+                            <div class="text-4xl font-black text-white">Rp 499.000</div>
+                            <span class="text-xs text-cyan-400 font-bold">Masa Aktif 6 Bulan (180 Hari)</span>
+                        </div>
+                        <p class="text-xs text-slate-300 mb-6">Pilihan terbaik untuk content creator aktif & sound designer yang rilis ratusan track.</p>
+                        <ul class="text-xs text-slate-200 space-y-3 mb-8">
+                            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Lisensi Resmi untuk 1 PC / Laptop</li>
+                            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Prioritas Update Genre & Vokal Baru</li>
+                            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> DSP Loudness Master (-14 LUFS)</li>
+                            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Unlimited High-Res Cover Art 3000px</li>
+                            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Smart Multi-Account Pool & Auto Quota</li>
+                            <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Komisi Afiliasi 30% (Rp 149.700/sale)</li>
+                        </ul>
+                    </div>
+                    <a href="https://t.me/AppDockHub_Bot?start=buy_sm_6m_ref_direct" data-buy-6m="true" target="_blank" class="pulse-cta block w-full py-4 rounded-xl bg-gradient-to-r from-violet-600 via-purple-600 to-cyan-500 hover:opacity-95 text-white font-black text-center text-sm shadow-xl transition">
+                        🔥 Beli Paket 6 Bulan (Rp 499.000)
+                    </a>
+                </div>
+
+                <!-- PAKET LIFETIME -->
+                <div class="rounded-3xl bg-slate-900/90 border border-slate-800 p-8 flex flex-col justify-between hover:border-amber-500/50 transition">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold mb-4">
+                            VIP LIFETIME STUDIO
+                        </div>
+                        <div class="mb-6">
+                            <span class="text-xs text-slate-500 line-through block">Rp 3.500.000</span>
+                            <div class="text-4xl font-black text-white">Rp 1.500.000</div>
+                            <span class="text-xs text-amber-400 font-bold">Akses Selamanya (Sekali Bayar)</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-6">Investasi sekali untuk selamanya bagi studio rekaman, label independen & agency musik.</p>
+                        <ul class="text-xs text-slate-300 space-y-3 mb-8">
+                            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">✓</span> Masa Aktif Selamanya (Tanpa Biaya Bulanan)</li>
+                            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">✓</span> Semua Update Fitur AI Mendatang Gratis</li>
+                            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">✓</span> Audio DSP Pro WAV Master & MP3 320k</li>
+                            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">✓</span> VIP Telegram Support Group</li>
+                            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">✓</span> Lisensi Hak Komersial Royalti 100%</li>
+                            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">✓</span> Komisi Afiliasi 30% (Rp 450.000/sale!)</li>
+                        </ul>
+                    </div>
+                    <a href="https://t.me/AppDockHub_Bot?start=buy_sm_lifetime_ref_direct" data-buy-life="true" target="_blank" class="block w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:opacity-95 text-slate-950 font-black text-center text-sm shadow-xl transition">
+                        💎 Beli Lifetime VIP (Rp 1.500.000)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-16 bg-slate-950/60 border-t border-slate-800/80">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-xs font-extrabold text-violet-400 uppercase tracking-widest block mb-2">PERTANYAAN UMUM</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4 text-sm">
+                <details class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer font-bold text-white group-open:text-cyan-400">
+                        <span>Apakah hasil lagu bisa di-upload ke Spotify, TikTok & YouTube?</span>
+                        <span class="text-xl transition group-open:rotate-180">▾</span>
+                    </summary>
+                    <p class="mt-3 text-slate-300 text-xs leading-relaxed">
+                        Sangat bisa! Lagu yang dihasilkan sudah dinormalisasi otomatis ke standar -14 LUFS dengan cover album 3000x3000px, sehingga memenuhi 100% syarat teknis agregator musik seperti DistroKid, TuneCore, NetEase, Routenote, dan sound library TikTok.
+                    </p>
+                </details>
+
+                <details class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer font-bold text-white group-open:text-cyan-400">
+                        <span>Bagaimana cara kerja Smart Multi-Account Pool?</span>
+                        <summary class="hidden"></summary>
+                        <span class="text-xl transition group-open:rotate-180">▾</span>
+                    </summary>
+                    <p class="mt-3 text-slate-300 text-xs leading-relaxed">
+                        Anda dapat login ke beberapa akun Google AI Studio sekali klik (headless browser). Sound Manager AI akan secara otomatis mendeteksi sisa kuota dan berganti ke akun berikutnya saat kuota habis, memastikan produksi musik Anda tidak terputus.
+                    </p>
+                </details>
+
+                <details class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer font-bold text-white group-open:text-cyan-400">
+                        <span>Bagaimana sistem aktivasi lisensi software?</span>
+                        <span class="text-xl transition group-open:rotate-180">▾</span>
+                    </summary>
+                    <p class="mt-3 text-slate-300 text-xs leading-relaxed">
+                        Setelah pembayaran via QRIS berhasil di Bot Telegram @AppDockHub_Bot, bot akan langsung mengirimkan kode lisensi resmi yang terikat ke HWID perangkat Anda. Cukup salin kode ke aplikasi Sound Manager AI dan klik Aktifkan!
+                    </p>
+                </details>
+
+                <details class="group bg-slate-900/80 border border-slate-800 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer font-bold text-white group-open:text-cyan-400">
+                        <span>Apakah saya bisa menjadi afiliasi dan mendapatkan komisi?</span>
+                        <span class="text-xl transition group-open:rotate-180">▾</span>
+                    </summary>
+                    <p class="mt-3 text-slate-300 text-xs leading-relaxed">
+                        Pasti! Setiap pengguna terdaftar di @AppDockHub_Bot otomatis memiliki link afiliasi 2-tier. Anda mendapatkan komisi langsung 30% untuk Tier 1 (Rp 29.700 s/d Rp 450.000 per transaksi) dan 5% Tier 2 yang langsung masuk ke saldo Telegram bot dan bisa ditarik kapan saja ke DANA, BCA, Mandiri, dll.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-20 border-t border-slate-800/80 py-12 text-center text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto px-6 space-y-4">
+            <div class="flex items-center justify-center gap-2">
+                <span class="text-base font-extrabold text-white">AppDockHub.com</span>
+                <span class="text-slate-600">•</span>
+                <span class="text-violet-400 font-semibold">Sound Manager AI Studio</span>
+            </div>
+            <p>© 2026 AppDock Hub Ecosystem. All rights reserved. Lisensi Digital Terproteksi Cloudflare Edge Network.</p>
+            <div class="flex items-center justify-center gap-6 pt-2">
+                <a href="index.html" data-keep-ref="true" class="hover:text-white transition">Katalog Software</a>
+                <a href="privacy.html" class="hover:text-white transition">Kebijakan Privasi</a>
+                <a href="https://t.me/AppDockHub_Bot" target="_blank" class="hover:text-cyan-400 transition">Bot Telegram Resmi</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AFFILIATE & DYNAMIC LINK LOGIC -->
+    <script>
+        const BOT_USERNAME = 'AppDockHub_Bot';
+
+        function getActiveReferral() {
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const refParam = urlParams.get('ref');
+                if (refParam && refParam.trim() && refParam.toLowerCase() !== 'direct') {
+                    const clean = refParam.trim();
+                    try { localStorage.setItem('appdockhub_ref', clean); } catch (_) {}
+                    document.cookie = 'aff_ref=' + encodeURIComponent(clean) + '; path=/; max-age=2592000; SameSite=Lax';
+                    return clean;
+                }
+            } catch (_) {}
+
+            try {
+                const stored = localStorage.getItem('appdockhub_ref');
+                if (stored && stored.toLowerCase() !== 'direct') return stored;
+            } catch (_) {}
+
+            const match = document.cookie.match(/(?:^|;\s*)aff_ref=([^;]*)/);
+            if (match && match[1]) {
+                const cVal = decodeURIComponent(match[1]).trim();
+                if (cVal && cVal.toLowerCase() !== 'direct') return cVal;
+            }
+
+            return 'direct';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const ref = getActiveReferral();
+
+            if (ref && ref !== 'direct') {
+                const badge = document.getElementById('refBadgeTop');
+                const codeSpan = document.getElementById('refCodeDisplay');
+                if (badge && codeSpan) {
+                    codeSpan.textContent = ref;
+                    badge.classList.remove('hidden');
+                }
+            }
+
+            // Update CTA links ke masing-masing paket produk
+            const url30d = 'https://t.me/' + BOT_USERNAME + '?start=buy_sm_30d_ref_' + encodeURIComponent(ref);
+            const url6m = 'https://t.me/' + BOT_USERNAME + '?start=buy_sm_6m_ref_' + encodeURIComponent(ref);
+            const urlLife = 'https://t.me/' + BOT_USERNAME + '?start=buy_sm_lifetime_ref_' + encodeURIComponent(ref);
+
+            document.querySelectorAll('a[data-buy-30d="true"]').forEach(a => a.setAttribute('href', url30d));
+            document.querySelectorAll('a[data-buy-6m="true"]').forEach(a => a.setAttribute('href', url6m));
+            document.querySelectorAll('a[data-buy-life="true"]').forEach(a => a.setAttribute('href', urlLife));
+
+            // Pertahankan ?ref= pada semua link navigasi internal
+            document.querySelectorAll('a[data-keep-ref="true"]').forEach(a => {
+                const baseHref = a.getAttribute('href').split('?')[0];
+                a.setAttribute('href', ref !== 'direct' ? baseHref + '?ref=' + encodeURIComponent(ref) : baseHref);
+            });
+
+            startSoundManagerLiveSocialProof();
+        });
+
+        const SOCIAL_NAMES = [
+            'Rizky Pratama (Surabaya)', 'Dimas Aditya (Bandung)', 'Siti Rahmawati (Jakarta Selatan)', 'Budi Santoso (Medan)',
+            'Nadia Putri (Yogyakarta)', 'Hendra Wijaya (Semarang)', 'Fajar Nugroho (Malang)', 'Rina Amelia (Bekasi)',
+            'Agus Setiawan (Tangerang)', 'Dewi Lestari (Denpasar)', 'Wahyu Ramadhan (Makassar)', 'Gilang Saputra (Palembang)',
+            'Taufik Hidayat (Bogor)', 'Andika Putra (Pekanbaru)', 'Melisa Kusuma (Depok)', 'Arif Wibowo (Solo)',
+            'Reza Pahlevi (Balikpapan)', 'Kevin Sanjaya (Batam)', 'Bagas Kurniawan (Sidoarjo)', 'Fitriani Nur (Banjarmasin)'
+        ];
+        const PAYOUT_BANKS = ['DANA', 'BCA', 'Mandiri', 'GoPay', 'BRI', 'BNI', 'OVO', 'ShopeePay', 'SeaBank'];
+        const PRODUCTS_SOLD = [
+            { name: 'Sound Manager AI (30 Hari)', price: 'Rp 99.000', comm: 'Rp 29.700' },
+            { name: 'Sound Manager AI (6 Bulan)', price: 'Rp 499.000', comm: 'Rp 149.700' },
+            { name: 'Sound Manager AI (Lifetime)', price: 'Rp 1.500.000', comm: 'Rp 450.000' }
+        ];
+        const TIME_LABELS = ['Baru saja', '1 menit lalu', '2 menit lalu', '3 menit lalu', '5 menit lalu'];
+
+        function startSoundManagerLiveSocialProof() {
+            const badgeEl = document.getElementById('liveProofBadge');
+            const textEl = document.getElementById('liveProofText');
+            if (!badgeEl || !textEl) return;
+
+            let step = 0;
+            setInterval(() => {
+                step++;
+                const person = SOCIAL_NAMES[(step * 7 + Math.floor(Math.random() * SOCIAL_NAMES.length)) % SOCIAL_NAMES.length];
+                const bank = PAYOUT_BANKS[(step * 5 + Math.floor(Math.random() * PAYOUT_BANKS.length)) % PAYOUT_BANKS.length];
+                const prod = PRODUCTS_SOLD[step % PRODUCTS_SOLD.length];
+                const timeStr = TIME_LABELS[step % TIME_LABELS.length];
+
+                textEl.style.opacity = '0';
+                setTimeout(() => {
+                    if (step % 3 === 1) {
+                        badgeEl.textContent = '🛒 LISENSI TERJUAL';
+                        badgeEl.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-violet-500/20 border border-violet-500/40 text-violet-300 font-extrabold text-[10px] uppercase tracking-wider shrink-0';
+                        textEl.innerHTML = '🔥 <strong class="text-amber-300">' + person + '</strong> baru saja membeli <strong class="text-white">' + prod.name + ' (' + prod.price + ')</strong> via QRIS ' + bank + ' • <span class="text-emerald-400 font-bold">✓ Lisensi HWID Aktif (' + timeStr + ')</span>';
+                    } else if (step % 3 === 2) {
+                        badgeEl.textContent = '💸 KOMISI CAIR';
+                        badgeEl.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-extrabold text-[10px] uppercase tracking-wider shrink-0';
+                        textEl.innerHTML = '💸 <strong class="text-emerald-300">Pencairan Komisi Afiliasi Berhasil!</strong> <strong class="text-white">' + person + '</strong> menerima transfer komisi <strong class="text-amber-300">' + prod.comm + '</strong> ke <strong class="text-cyan-300">' + bank + '</strong> • <span class="text-emerald-400 font-bold">✓ LUNAS (' + timeStr + ')</span>';
+                    } else {
+                        badgeEl.textContent = '⚡ KOMISI MASUK';
+                        badgeEl.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 font-extrabold text-[10px] uppercase tracking-wider shrink-0';
+                        textEl.innerHTML = '💰 <strong class="text-cyan-300">Komisi Afiliasi Masuk!</strong> <strong class="text-white">' + person + '</strong> meraih komisi langsung <strong class="text-emerald-300">+' + prod.comm + '</strong> dari penjualan <strong class="text-violet-300">' + prod.name + '</strong> • <span class="text-slate-400">(' + timeStr + ')</span>';
+                    }
+                    textEl.style.opacity = '1';
+                }, 260);
+            }, 4200);
+        }
+    </script>
+</body>
+</html>
